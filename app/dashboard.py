@@ -188,22 +188,8 @@ def load_data(query, table_name=None):
         return pd.DataFrame()
 
 # ==============================================================================
-# SIDEBAR FILTERS & CONFIG
+# SIDEBAR INFO
 # ==============================================================================
-st.sidebar.markdown("### 🎛️ Global Controls")
-
-# Fetch available departments
-dept_df = load_data("SELECT department FROM dim_departments ORDER BY department", table_name="dim_departments")
-departments = ["All"] + dept_df["department"].tolist() if not dept_df.empty else ["All"]
-
-selected_dept = st.sidebar.selectbox("Filter by Department", departments)
-
-# Filter logic prefix for queries where applicable
-dept_filter = ""
-if selected_dept != "All":
-    dept_filter = f"WHERE department = '{selected_dept}'"
-
-st.sidebar.markdown("---")
 st.sidebar.markdown("### ℹ️ About Platform")
 st.sidebar.info(
     "Enterprise E-Commerce Intelligence Portal.\n\n"
@@ -358,8 +344,20 @@ with tab_cust:
 # TAB 3: PRODUCT ANALYTICS
 # ==============================================================================
 with tab_prod:
+    # Local Tab Filters
+    dept_df = load_data("SELECT department FROM dim_departments ORDER BY department", table_name="dim_departments")
+    departments = ["All"] + dept_df["department"].tolist() if not dept_df.empty else ["All"]
+    
+    col_filter, _ = st.columns([1, 3])
+    with col_filter:
+        selected_dept = st.selectbox("🎛️ Filter by Department:", departments)
+        
+    dept_filter = ""
+    if selected_dept != "All":
+        dept_filter = f"WHERE department = '{selected_dept}'"
+
     st.markdown("### 📈 Revenue Concentration (Pareto Curve)")
-    pareto_df = load_data(f"SELECT revenue_rank, cumulative_revenue_pct FROM v_revenue_concentration {dept_filter} ORDER BY revenue_rank LIMIT 1000")
+    pareto_df = load_data(f"SELECT revenue_rank, cumulative_revenue_pct FROM v_revenue_concentration {dept_filter} ORDER BY revenue_rank LIMIT 1000", table_name="v_revenue_concentration")
     if not pareto_df.empty:
         fig_pareto = px.line(
             pareto_df, x="revenue_rank", y="cumulative_revenue_pct", 
@@ -374,7 +372,7 @@ with tab_prod:
     
     with c1:
         st.markdown("### 🎯 Department Penetration")
-        pen_df = load_data("SELECT department, penetration_pct FROM v_department_penetration ORDER BY penetration_pct DESC LIMIT 10")
+        pen_df = load_data("SELECT department, penetration_pct FROM v_department_penetration ORDER BY penetration_pct DESC LIMIT 10", table_name="v_department_penetration")
         if not pen_df.empty:
             fig_pen = px.bar(
                 pen_df, x="penetration_pct", y="department", orientation='h',
@@ -386,7 +384,7 @@ with tab_prod:
 
     with c2:
         st.markdown("### 🔄 Reorder Behavior")
-        reorder_df = load_data(f"SELECT department, reorder_rate_pct FROM v_reorder_behavior {dept_filter} GROUP BY department, reorder_rate_pct ORDER BY reorder_rate_pct DESC LIMIT 10")
+        reorder_df = load_data(f"SELECT department, reorder_rate_pct FROM v_reorder_behavior {dept_filter} GROUP BY department, reorder_rate_pct ORDER BY reorder_rate_pct DESC LIMIT 10", table_name="v_reorder_behavior")
         if not reorder_df.empty:
             fig_reo = px.bar(
                 reorder_df, x="department", y="reorder_rate_pct",
@@ -403,7 +401,7 @@ with tab_prod:
         {dept_filter}
         ORDER BY month DESC, ABS(revenue_growth_pct) DESC 
         LIMIT 15
-    """)
+    """, table_name="v_product_trends")
     if not trends_df.empty:
         st.dataframe(trends_df, use_container_width=True)
 
