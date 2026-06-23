@@ -12,7 +12,7 @@
 
 <p align="center">
   <b>An end-to-end Enterprise Analytics Engine processing 33.8 Million rows of transactional data.</b><br>
-  Built with a modern Medallion Architecture (DuckDB), Machine Learning Pipelines (K-Means, Holt-Winters, Isolation Forest), and an interactive Premium Glassmorphism UI.
+  Built with a modern Medallion Architecture (DuckDB), Machine Learning Pipelines (K-Means, Isolation Forest), and an interactive Premium Glassmorphism UI.
 </p>
 
 ---
@@ -39,18 +39,16 @@ It is designed to showcase senior-level capabilities in **Data Engineering**, **
 
 ### 2. Machine Learning Operations (MLOps)
 *   **Customer Segmentation**: Unsupervised `K-Means Clustering` grouping 200,000+ customers into distinct behavioral segments based on RFM (Recency, Frequency, Monetary) metrics.
-*   **Demand Forecasting**: `Holt-Winters Exponential Smoothing` and `RandomForest` fallbacks predicting future 30-day revenue trends by capturing complex seasonal buying patterns.
 *   **Anomaly Detection**: `Isolation Forest` isolating irregular transaction days and supply-chain volume spikes.
 *   **Market Basket Analysis**: Multi-threaded `Polars` cartesian self-joins analyzing 22M+ cart pairings to calculate Association Rules (Support, Confidence, Lift) for cross-selling recommendations.
 
 ### 3. Business Intelligence (Streamlit)
-A modern, **Premium Glassmorphism Dashboard** consisting of 6 distinct views:
+A modern, **Premium Glassmorphism Dashboard** consisting of 5 distinct views:
 1.  **Executive Summary**: MoM Growth, Daily Revenue anomalies, and AI-driven business insights.
 2.  **Customer Intelligence**: Cohort Retention Heatmaps, RFM Matrices, and ML Cluster distributions.
 3.  **Product Analytics**: ABC Inventory Pareto curves and Department cross-penetration logic.
 4.  **Basket Intelligence**: Association rule engines (e.g., Apple + Strawberry bundles with 67x Lift).
-5.  **Demand Forecasting**: 30-day out-of-sample ML projection plots.
-6.  **Data Quality**: Global warehouse health metrics and table-by-table integrity scores.
+5.  **Data Quality**: Global warehouse health metrics and table-by-table integrity scores.
 
 ---
 
@@ -85,7 +83,6 @@ A modern, **Premium Glassmorphism Dashboard** consisting of 6 distinct views:
 5. Run the Machine Learning Pipelines:
    ```bash
    python -m src.ml.train_segmentation
-   python -m src.ml.train_forecasting
    python -m src.ml.anomaly_detection
    python -m src.ml.train_recommendations
    python -m src.ai_insights.gemini_summarizer

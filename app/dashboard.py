@@ -204,12 +204,11 @@ st.sidebar.info(
 st.markdown("<h1 style='text-align: center; margin-bottom: 30px; background: -webkit-linear-gradient(45deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;'>🛒 Store Dashboard</h1>", unsafe_allow_html=True)
 
 # Define Tabs
-tab_exec, tab_cust, tab_prod, tab_basket, tab_forecast, tab_dq = st.tabs([
+tab_exec, tab_cust, tab_prod, tab_basket, tab_dq = st.tabs([
     "📊 Overview", 
     "👥 Customers", 
     "📦 Products", 
     "🛒 Cart Analysis",
-    "📈 Sales Forecast",
     "🔍 Data Health"
 ])
 
@@ -466,34 +465,6 @@ with tab_basket:
         cross_sell_df = load_data("SELECT dept_a, dept_b, overlap_pct FROM v_department_cross_sell", table_name="v_department_cross_sell")
         if not cross_sell_df.empty:
             st.dataframe(cross_sell_df, use_container_width=True)
-
-# ==============================================================================
-# TAB 5: DEMAND FORECASTING
-# ==============================================================================
-with tab_forecast:
-    st.markdown("### 🔮 Predicted Sales for the Next 30 Days")
-    st.caption("Using AI algorithms to predict future sales based on past seasonal trends.")
-    
-    history = load_data("SELECT date, actual_revenue, predicted_revenue_hw, predicted_revenue_xgb FROM forecast_evaluation ORDER BY date")
-    forecast = load_data("SELECT forecast_date, predicted_revenue, model_used FROM forecast_predictions ORDER BY forecast_date")
-    
-    if not history.empty and not forecast.empty:
-        history["date"] = pd.to_datetime(history["date"])
-        forecast["forecast_date"] = pd.to_datetime(forecast["forecast_date"])
-        
-        fig_f = go.Figure()
-        
-        # History
-        fig_f.add_trace(go.Scatter(x=history["date"], y=history["actual_revenue"], name="Actual Revenue", line=dict(color="#cbd5e0", width=2)))
-        # XGB Fit
-        fig_f.add_trace(go.Scatter(x=history["date"], y=history["predicted_revenue_xgb"], name="ML Fit (XGBoost)", line=dict(color="#f59e0b", dash="dot")))
-        # HW Fit
-        fig_f.add_trace(go.Scatter(x=history["date"], y=history["predicted_revenue_hw"], name="HW Fit", line=dict(color="#10b981", dash="dot")))
-        # Future
-        fig_f.add_trace(go.Scatter(x=forecast["forecast_date"], y=forecast["predicted_revenue"], name="Future Forecast", line=dict(color="#8b5cf6", width=3)))
-        
-        fig_f.update_layout(**plotly_layout, height=500, hovermode="x unified")
-        st.plotly_chart(fig_f, use_container_width=True)
 
 # ==============================================================================
 # TAB 6: DATA QUALITY

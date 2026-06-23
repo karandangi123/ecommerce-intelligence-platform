@@ -27,8 +27,6 @@ def export_cache():
         "v_day_hour_heatmap",
         "association_rules",
         "v_department_cross_sell",
-        "forecast_evaluation",
-        "forecast_predictions",
         "dq_table_scores"
     ]
     
