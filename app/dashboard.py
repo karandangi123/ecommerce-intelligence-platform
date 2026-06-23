@@ -310,14 +310,16 @@ with tab_cust:
 
     with c2:
         st.markdown("### 🏆 Customer Lifetime Value (CLV) Tiers")
-        clv_df = load_data("SELECT clv_tier, sum(projected_annual_clv) as total_value FROM v_customer_ltv GROUP BY clv_tier")
+        clv_df = load_data("SELECT * FROM v_customer_ltv", table_name="v_customer_ltv")
         if not clv_df.empty:
+            clv_df = clv_df.groupby("clv_tier")["projected_annual_clv"].sum().reset_index(name="total_value")
             fig_clv = px.pie(
-                clv_df, values="total_value", names="clv_tier", hole=0.6,
+                clv_df, values="total_value", names="clv_tier", hole=0.6, 
                 color_discrete_sequence=["#f59e0b", "#6366f1", "#10b981", "#64748b"]
             )
             fig_clv.update_traces(textposition='inside', textinfo='percent+label')
-            fig_clv.update_layout(**plotly_layout, height=350, showlegend=False, annotations=[dict(text='CLV Value', x=0.5, y=0.5, font_size=20, showarrow=False)])
+            fig_clv.update_layout(**plotly_layout, height=350, showlegend=False, 
+                                  annotations=[dict(text='CLV', x=0.5, y=0.5, font_size=20, showarrow=False)])
             st.plotly_chart(fig_clv, use_container_width=True)
             
     c3, c4 = st.columns(2)
@@ -384,8 +386,9 @@ with tab_prod:
 
     with c2:
         st.markdown("### 🔄 Reorder Behavior")
-        reorder_df = load_data(f"SELECT department, reorder_rate_pct FROM v_reorder_behavior {dept_filter} GROUP BY department, reorder_rate_pct ORDER BY reorder_rate_pct DESC LIMIT 10", table_name="v_reorder_behavior")
+        reorder_df = load_data(f"SELECT department, reorder_rate_pct FROM v_reorder_behavior {dept_filter} ORDER BY reorder_rate_pct DESC LIMIT 50", table_name="v_reorder_behavior")
         if not reorder_df.empty:
+            reorder_df = reorder_df.drop_duplicates(subset=["department"]).head(10)
             fig_reo = px.bar(
                 reorder_df, x="department", y="reorder_rate_pct",
                 color="reorder_rate_pct", color_continuous_scale="Emrld",
