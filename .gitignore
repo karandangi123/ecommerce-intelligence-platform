@@ -13,10 +13,15 @@ ecommerce_analytics.db
 
 # Data files (Avoid pushing massive CSVs to GitHub)
 data/raw/*.csv
+data/bronze/*.parquet
 data/silver/*.parquet
 data/gold/*.db
 data/gold/*.parquet
 data/**/*.csv
+
+# Archives
+archive/
+archive.zip
 
 # Logs and Caches
 *.log

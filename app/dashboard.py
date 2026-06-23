@@ -125,26 +125,66 @@ st.markdown("""
 @st.cache_resource
 def get_db_connection():
     config_path = "configs/pipeline_config.yaml"
+    db_path = "data/gold/ecommerce_analytics.db"
     if os.path.exists(config_path):
         with open(config_path, "r") as f:
             config = yaml.safe_load(f)
-        db_path = config["paths"]["gold_db_path"]
-    else:
-        db_path = "data/gold/ecommerce_analytics.db"
+        db_path = config["paths"].get("gold_db_path", db_path)
         
-    if not os.path.exists(db_path):
-        st.error(f"DuckDB database not found at {db_path}. Please run the medallion pipeline first.")
-        st.stop()
-    return duckdb.connect(db_path, read_only=True)
+    if os.path.exists(db_path):
+        return duckdb.connect(db_path, read_only=True)
+    return None
 
 conn = get_db_connection()
 
 @st.cache_data(ttl=3600)
-def load_data(query):
-    try:
-        return conn.execute(query).df()
-    except Exception as e:
-        st.error(f"Query failed: {e}")
+def load_data(query, table_name=None):
+    """
+    Executes a SQL query against DuckDB. If DuckDB is missing (e.g. Streamlit Cloud),
+    it reads from the static Parquet cache instead.
+    """
+    if conn is not None:
+        try:
+            return conn.execute(query).df()
+        except Exception as e:
+            st.error(f"Query failed: {e}")
+            return pd.DataFrame()
+    else:
+        # Fallback to Parquet cache
+        if not table_name:
+            # Try to extract table name from simple SELECT * FROM table_name queries
+            import re
+            match = re.search(r'FROM\s+([a-zA-Z0-9_]+)', query, re.IGNORECASE)
+            if match:
+                table_name = match.group(1)
+        
+        if table_name:
+            cache_file = f"data/dashboard_cache/{table_name}.parquet"
+            if os.path.exists(cache_file):
+                df = pd.read_parquet(cache_file)
+                # Handle simple WHERE filters if present in the query string
+                if "WHERE department = " in query:
+                    dept = query.split("WHERE department = '")[1].split("'")[0]
+                    if "department" in df.columns:
+                        df = df[df["department"] == dept]
+                
+                # Handle ORDER BY and LIMIT if present
+                if "ORDER BY" in query:
+                    order_col = query.split("ORDER BY ")[1].split()[0]
+                    ascending = "DESC" not in query.upper()
+                    if order_col in df.columns:
+                        df = df.sort_values(by=order_col, ascending=ascending)
+                
+                if "LIMIT" in query:
+                    try:
+                        limit_val = int(query.split("LIMIT ")[1].split()[0])
+                        df = df.head(limit_val)
+                    except:
+                        pass
+                
+                return df
+                
+        st.error("Database connection missing and cache not found.")
         return pd.DataFrame()
 
 # ==============================================================================
@@ -153,7 +193,7 @@ def load_data(query):
 st.sidebar.markdown("### 🎛️ Global Controls")
 
 # Fetch available departments
-dept_df = load_data("SELECT department FROM dim_departments ORDER BY department")
+dept_df = load_data("SELECT department FROM dim_departments ORDER BY department", table_name="dim_departments")
 departments = ["All"] + dept_df["department"].tolist() if not dept_df.empty else ["All"]
 
 selected_dept = st.sidebar.selectbox("Filter by Department", departments)
