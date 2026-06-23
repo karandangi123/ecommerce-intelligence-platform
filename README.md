@@ -102,12 +102,4 @@ pytest tests/test_pipeline.py -v
 ```
 
 ---
-
-## 📄 Detailed Report & Recruiter Guide
-Included in this repository is a massive, comprehensive PDF document:
-`Instacart_ECommerce_Platform_Detailed_Report.pdf`
-
-This document contains line-by-line code explanations, architecture decisions, metric logic, and a dedicated **Recruiter Q&A** section designed for technical interviews. 
-
----
 *Developed with 💡 by Karan Dangi.*
