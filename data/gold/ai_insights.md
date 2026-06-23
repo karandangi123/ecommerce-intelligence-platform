@@ -36,12 +36,7 @@ The association rules engine mined high-lift item pairings frequently purchased 
 
 ---
 
-### 5. ⏱️ Operational Seasonality & Capacity Scheduling
+### 5. ⏱️ Operational Seasonality & Anomalies
 *   **Peak Demand Windows:** The top business window occurs on **Wednesday at 11:00** (generating **$2,421,753.95** across **40,014** orders).
 *   **Logistics Dispatch:** Driver dispatch schedules and warehouse staffing rosters should be dynamically scaled up 2 hours before this peak window to avoid order fulfillment latency.
-
----
-
-### 6. 🔮 30-Day Forward Outlook & Capacity Planning
-*   **Demand Projections:** The 30-day out-of-sample forecast projects a total revenue of **$0.00** (model: **Holt-Winters**), averaging **$0.00/day**. Anomalous transaction volumes were flagged on **6** days in the historical timeline. These represent extreme seasonal surges or operational shifts.
-*   **Planning Insight:** Use these forecast bounds for warehouse layout optimization and inventory restocking intervals.
+*   **Anomaly Detection:** Anomalous transaction volumes were flagged on **6** days in the historical timeline. These represent extreme seasonal surges or operational shifts.

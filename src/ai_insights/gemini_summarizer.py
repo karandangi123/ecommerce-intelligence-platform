@@ -16,7 +16,7 @@ def generate_insights():
     model_name = config["ai"]["model_name"]
     
     logger.info("Connecting to DuckDB to extract KPI views for AI summary...")
-    conn = duckdb.connect(db_path)
+    conn = duckdb.connect(db_path, read_only=True)
     
     # 1. Load Executive KPIs
     exec_kpi = conn.execute("SELECT * FROM v_executive_kpis").df().to_dict(orient="records")[0]
@@ -55,17 +55,7 @@ def generate_insights():
     except Exception as e:
         logger.warning(f"Could not load top association rules: {e}")
         
-    forecast_summary = {}
-    try:
-        forecast_df = conn.execute("""
-            SELECT model_used, sum(predicted_revenue) as total_forecast_revenue, avg(predicted_revenue) as avg_forecast_revenue
-            FROM forecast_predictions
-            GROUP BY model_used
-        """).df()
-        if len(forecast_df) > 0:
-            forecast_summary = forecast_df.to_dict(orient="records")[0]
-    except Exception as e:
-        logger.warning(f"Could not load forecast summary: {e}")
+
         
     anomaly_summary = 0
     try:
@@ -79,7 +69,7 @@ def generate_insights():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         logger.warning("GEMINI_API_KEY environment variable not found. Generating rich, optimized rule-based summary...")
-        return generate_fallback_summary(exec_kpi, cust_segments, top_products, peak_hours, abc_summary, assoc_rules, forecast_summary, anomaly_summary)
+        return generate_fallback_summary(exec_kpi, cust_segments, top_products, peak_hours, abc_summary, assoc_rules, anomaly_summary)
         
     # If API key exists, call Gemini with our structured data
     logger.info("Constructing prompt for Gemini model...")
@@ -116,8 +106,7 @@ Customer RFM Segmentation breakdown:
         for r in assoc_rules:
             prompt += f"- {r['prod_a']} + {r['prod_b']} (Lift: {r['lift']:.2f}, Confidence: {r['confidence_a_b']:.2f})\n"
 
-    if forecast_summary:
-        prompt += f"\nDemand Forecast Summary (Next 30 Days):\n- Predicted total revenue: ${forecast_summary['total_forecast_revenue']:,.2f} (Model: {forecast_summary['model_used']})\n"
+
 
     if anomaly_summary > 0:
         prompt += f"\nAnomalous Transaction Volume Days flagged: {anomaly_summary}\n"
@@ -128,7 +117,7 @@ Please write a concise, professional executive report (4-5 short paragraphs) sum
 2. Key insights from the RFM Customer segments (which segments represent high risk vs. high value, e.g., the Pareto principle).
 3. Product inventory insights (referencing the top products and their ABC classes and catalog revenue concentration).
 4. Market Basket rules (how bundling can drive AOV higher).
-5. Direct business recommendations for marketing (e.g. how to target 'At Risk' vs. 'Champions') and operations (e.g. inventory planning during peak order times and 30-day forecast).
+5. Direct business recommendations for marketing (e.g. how to target 'At Risk' vs. 'Champions') and operations (e.g. inventory planning during peak order times).
 
 Provide your response in clean markdown with bullet points where appropriate. Do not repeat the raw data tables in your output. Make it sound sophisticated, suitable for a Chief Operating Officer (COO) or CEO presentation.
 """
@@ -144,9 +133,9 @@ Provide your response in clean markdown with bullet points where appropriate. Do
         return response.text
     except Exception as e:
         logger.error(f"Failed to generate AI insights via Gemini API: {str(e)}. Falling back...")
-        return generate_fallback_summary(exec_kpi, cust_segments, top_products, peak_hours, abc_summary, assoc_rules, forecast_summary, anomaly_summary)
+        return generate_fallback_summary(exec_kpi, cust_segments, top_products, peak_hours, abc_summary, assoc_rules, anomaly_summary)
 
-def generate_fallback_summary(exec_kpi, cust_segments, top_products, peak_hours, abc_summary, assoc_rules, forecast_summary, anomaly_summary):
+def generate_fallback_summary(exec_kpi, cust_segments, top_products, peak_hours, abc_summary, assoc_rules, anomaly_summary):
     total_rev = exec_kpi['total_revenue']
     total_orders = exec_kpi['total_orders']
     aov = exec_kpi['average_order_value']
@@ -178,12 +167,7 @@ def generate_fallback_summary(exec_kpi, cust_segments, top_products, peak_hours,
     else:
         rules_text = "- *Market Basket Analysis completed. Look at the Product & Basket tab to explore co-purchase networks.*"
         
-    # Forecast summary analysis
-    forecast_text = ""
-    if forecast_summary:
-        forecast_text = f"The 30-day out-of-sample forecast projects a total revenue of **${forecast_summary['total_forecast_revenue']:,.2f}** (model: **{forecast_summary['model_used']}**), averaging **${forecast_summary['avg_forecast_revenue']:,.2f}/day**."
-    else:
-        forecast_text = "Future demand forecasting models have been successfully trained and registered in the database."
+
         
     # Anomaly text
     anomaly_text = ""
@@ -228,15 +212,10 @@ The association rules engine mined high-lift item pairings frequently purchased 
 
 ---
 
-### 5. ⏱️ Operational Seasonality & Capacity Scheduling
+### 5. ⏱️ Operational Seasonality & Anomalies
 *   **Peak Demand Windows:** The top business window occurs on **{peak_hours[0]['day_name']} at {peak_hours[0]['hour_of_day']}:00** (generating **${peak_hours[0]['total_revenue']:,.2f}** across **{peak_hours[0]['total_orders']:,}** orders).
 *   **Logistics Dispatch:** Driver dispatch schedules and warehouse staffing rosters should be dynamically scaled up 2 hours before this peak window to avoid order fulfillment latency.
-
----
-
-### 6. 🔮 30-Day Forward Outlook & Capacity Planning
-*   **Demand Projections:** {forecast_text} {anomaly_text}
-*   **Planning Insight:** Use these forecast bounds for warehouse layout optimization and inventory restocking intervals.
+*   **Anomaly Detection:** {anomaly_text}
 """
     return summary
 
