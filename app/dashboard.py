@@ -201,16 +201,16 @@ st.sidebar.info(
 # ==============================================================================
 # MAIN DASHBOARD HEADER
 # ==============================================================================
-st.markdown("<h1 style='text-align: center; margin-bottom: 30px; background: -webkit-linear-gradient(45deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;'>🔮 Intelligence Command Center</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; margin-bottom: 30px; background: -webkit-linear-gradient(45deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;'>🛒 Store Dashboard</h1>", unsafe_allow_html=True)
 
 # Define Tabs
 tab_exec, tab_cust, tab_prod, tab_basket, tab_forecast, tab_dq = st.tabs([
-    "📊 Executive Summary", 
-    "👥 Customer Intelligence", 
-    "📦 Product Analytics", 
-    "🛒 Basket Intelligence",
-    "📈 Demand Forecasting",
-    "🔍 Data Quality"
+    "📊 Overview", 
+    "👥 Customers", 
+    "📦 Products", 
+    "🛒 Cart Analysis",
+    "📈 Sales Forecast",
+    "🔍 Data Health"
 ])
 
 # Standard Plotly layout template
@@ -227,10 +227,10 @@ plotly_layout = dict(
 # ==============================================================================
 with tab_exec:
     # 1. Monthly KPIs
-    monthly_kpis = load_data("SELECT * FROM v_monthly_kpis ORDER BY month DESC LIMIT 2")
+    monthly_kpis = load_data("SELECT * FROM v_monthly_kpis ORDER BY month DESC LIMIT 2", table_name="v_monthly_kpis")
     if not monthly_kpis.empty and len(monthly_kpis) >= 2:
         current = monthly_kpis.iloc[0]
-        st.markdown("### 📌 Key Performance Indicators (Latest Month)")
+        st.markdown("### 📌 Latest Month Performance")
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Monthly Revenue", f"${current['revenue']:,.0f}", f"{current['revenue_growth_pct']}% MoM")
         c2.metric("Monthly Orders", f"{int(current['orders']):,}", f"{current['order_growth_pct']}% MoM")
@@ -239,8 +239,9 @@ with tab_exec:
         st.markdown("<br>", unsafe_allow_html=True)
     
     # 2. Revenue Trend & Anomalies
-    st.markdown("### 📈 Daily Revenue Tracking & Anomaly Detection")
-    anomalies_df = load_data("SELECT date, revenue, is_anomaly FROM daily_anomalies ORDER BY date")
+    st.markdown("### 📈 Daily Sales & Unusual Drops/Spikes")
+    st.caption("The red dots indicate days where sales were unexpectedly high or low based on historical trends.")
+    anomalies_df = load_data("SELECT date, revenue, is_anomaly FROM daily_anomalies ORDER BY date", table_name="daily_anomalies")
     if not anomalies_df.empty:
         anomalies_df["date"] = pd.to_datetime(anomalies_df["date"])
         fig_sales = go.Figure()
@@ -265,8 +266,8 @@ with tab_exec:
         fig_sales.update_layout(**plotly_layout, hovermode="x unified", height=350)
         st.plotly_chart(fig_sales, use_container_width=True)
 
-    # 3. AI Insights Panel
-    st.markdown("### 🤖 GenAI Strategy Insights")
+    # 3. AI Briefing
+    st.markdown("### 🤖 AI Summary of Store Performance")
     insights_path = "data/gold/ai_insights.md"
     if os.path.exists(insights_path):
         with open(insights_path, "r") as f:
@@ -277,8 +278,9 @@ with tab_exec:
 # TAB 2: CUSTOMER INTELLIGENCE
 # ==============================================================================
 with tab_cust:
-    st.markdown("### 🔥 Monthly Cohort Retention Matrix")
-    cohort_df = load_data("SELECT cohort_month, month_number, retention_rate_pct FROM v_cohort_retention WHERE month_number > 0 AND cohort_month >= '2025-01-01'")
+    st.markdown("### 🔥 Customer Loyalty (How many come back?)")
+    st.caption("This heatmap shows what percentage of new customers return to buy again in the following months.")
+    cohort_df = load_data("SELECT cohort_month, month_number, retention_rate_pct FROM v_cohort_retention WHERE month_number > 0 AND cohort_month >= '2025-01-01'", table_name="v_cohort_retention")
     if not cohort_df.empty:
         cohort_df["cohort_month"] = pd.to_datetime(cohort_df["cohort_month"]).dt.strftime('%Y-%m')
         cohort_pivot = cohort_df.pivot(index="cohort_month", columns="month_number", values="retention_rate_pct")
@@ -309,7 +311,8 @@ with tab_cust:
             st.plotly_chart(fig_rfm, use_container_width=True)
 
     with c2:
-        st.markdown("### 🏆 Customer Lifetime Value (CLV) Tiers")
+        st.markdown("### 🏆 Customer Lifetime Value")
+        st.caption("How much total money different groups of customers will spend over time.")
         clv_df = load_data("SELECT * FROM v_customer_ltv", table_name="v_customer_ltv")
         if not clv_df.empty:
             clv_df = clv_df.groupby("clv_tier")["projected_annual_clv"].sum().reset_index(name="total_value")
@@ -324,14 +327,9 @@ with tab_cust:
             
     c3, c4 = st.columns(2)
     with c3:
-        st.markdown("### 📊 Customer Segment Migration (Summary)")
-        segment_summary_df = load_data("SELECT * FROM v_segment_summary ORDER BY avg_spend DESC")
-        if not segment_summary_df.empty:
-            st.dataframe(segment_summary_df[['rfm_segment', 'customers', 'pct_of_total', 'avg_spend', 'revenue_share_pct']], use_container_width=True)
-
-    with c4:
-        st.markdown("### 🛒 Purchase Frequency Distribution")
-        frequency_df = load_data("SELECT frequency_bucket, customer_count, revenue_pct FROM v_purchase_frequency")
+        st.markdown("### 📊 How Often Do Customers Buy?")
+        st.caption("Distribution showing one-time buyers versus loyal power users.")
+        frequency_df = load_data("SELECT frequency_bucket, customer_count, revenue_pct FROM v_purchase_frequency", table_name="v_purchase_frequency")
         if not frequency_df.empty:
             fig_freq = px.bar(
                 frequency_df, x="customer_count", y="frequency_bucket", orientation='h',
@@ -340,6 +338,12 @@ with tab_cust:
             )
             fig_freq.update_layout(**plotly_layout, height=300, showlegend=False, yaxis={'categoryorder':'total ascending'})
             st.plotly_chart(fig_freq, use_container_width=True)
+
+    with c4:
+        st.markdown("### 📊 Customer Segment Migration (Summary)")
+        segment_summary_df = load_data("SELECT * FROM v_segment_summary ORDER BY avg_spend DESC")
+        if not segment_summary_df.empty:
+            st.dataframe(segment_summary_df[['rfm_segment', 'customers', 'pct_of_total', 'avg_spend', 'revenue_share_pct']], use_container_width=True)
 
 
 # ==============================================================================
@@ -358,7 +362,8 @@ with tab_prod:
     if selected_dept != "All":
         dept_filter = f"WHERE department = '{selected_dept}'"
 
-    st.markdown("### 📈 Revenue Concentration (Pareto Curve)")
+    st.markdown("### 📈 Top Selling Products (80/20 Rule)")
+    st.caption("This curve shows that a small number of top products generate most of the store's revenue.")
     pareto_df = load_data(f"SELECT revenue_rank, cumulative_revenue_pct FROM v_revenue_concentration {dept_filter} ORDER BY revenue_rank LIMIT 1000", table_name="v_revenue_concentration")
     if not pareto_df.empty:
         fig_pareto = px.line(
@@ -373,7 +378,7 @@ with tab_prod:
     c1, c2 = st.columns(2)
     
     with c1:
-        st.markdown("### 🎯 Department Penetration")
+        st.markdown("### 🎯 Most Popular Departments")
         pen_df = load_data("SELECT department, penetration_pct FROM v_department_penetration ORDER BY penetration_pct DESC LIMIT 10", table_name="v_department_penetration")
         if not pen_df.empty:
             fig_pen = px.bar(
@@ -385,7 +390,7 @@ with tab_prod:
             st.plotly_chart(fig_pen, use_container_width=True)
 
     with c2:
-        st.markdown("### 🔄 Reorder Behavior")
+        st.markdown("### 🔄 Departments with the Most Repeat Purchases")
         reorder_df = load_data(f"SELECT department, reorder_rate_pct FROM v_reorder_behavior {dept_filter} ORDER BY reorder_rate_pct DESC LIMIT 50", table_name="v_reorder_behavior")
         if not reorder_df.empty:
             reorder_df = reorder_df.drop_duplicates(subset=["department"]).head(10)
@@ -397,7 +402,7 @@ with tab_prod:
             fig_reo.update_layout(**plotly_layout, height=400, showlegend=False)
             st.plotly_chart(fig_reo, use_container_width=True)
             
-    st.markdown("### 🚀 Top Growing & Declining Products (MoM)")
+    st.markdown("### 🚀 Products Trending Up & Down (This Month vs Last)")
     trends_df = load_data(f"""
         SELECT month, product_name, department, revenue, revenue_growth_pct 
         FROM v_product_trends 
@@ -415,7 +420,9 @@ with tab_basket:
     c1, c2 = st.columns([1.5, 1])
     
     with c1:
-        st.markdown("### 📦 Cart Size Distribution")
+        st.markdown("### 🧩 Customer Types")
+        st.caption("We grouped customers using AI based on how recently and often they buy.")
+        seg_df = load_data("SELECT segment as Segment, total_customers as Customers, avg_monetary as Avg_Spend FROM v_segment_summary", table_name="v_segment_summary")
         cart_df = load_data("SELECT cart_size_bucket, order_count, avg_cart_value FROM v_cart_analysis ORDER BY min_items")
         if not cart_df.empty:
             fig_cart = px.bar(
@@ -428,6 +435,8 @@ with tab_basket:
             st.plotly_chart(fig_cart, use_container_width=True)
             
     with c2:
+        st.markdown("### 🛒 How Many Items Do People Buy at Once?")
+        cart_df = load_data("SELECT cart_size_bucket, total_orders FROM v_cart_analysis", table_name="v_cart_analysis")
         st.markdown("### 🕰️ Purchase Time Heatmap")
         heatmap_df = load_data("SELECT day_name, hour_of_day, order_count FROM v_day_hour_heatmap")
         if not heatmap_df.empty:
@@ -452,12 +461,9 @@ with tab_basket:
             st.dataframe(assoc_df, use_container_width=True)
             
     with c4:
-        st.markdown("### 🔗 Department Cross-Sell Matrix")
-        cross_sell_df = load_data("""
-            SELECT department_a, department_b, pct_of_a_also_buy_b 
-            FROM v_department_cross_sell 
-            ORDER BY pct_of_a_also_buy_b DESC LIMIT 15
-        """)
+        st.markdown("### 🔄 How Departments Overlap")
+        st.caption("Percentage of customers who buy from two different departments simultaneously.")
+        cross_sell_df = load_data("SELECT dept_a, dept_b, overlap_pct FROM v_department_cross_sell", table_name="v_department_cross_sell")
         if not cross_sell_df.empty:
             st.dataframe(cross_sell_df, use_container_width=True)
 
@@ -465,7 +471,8 @@ with tab_basket:
 # TAB 5: DEMAND FORECASTING
 # ==============================================================================
 with tab_forecast:
-    st.markdown("### 🔮 Advanced Demand Forecasting")
+    st.markdown("### 🔮 Predicted Sales for the Next 30 Days")
+    st.caption("Using AI algorithms to predict future sales based on past seasonal trends.")
     
     history = load_data("SELECT date, actual_revenue, predicted_revenue_hw, predicted_revenue_xgb FROM forecast_evaluation ORDER BY date")
     forecast = load_data("SELECT forecast_date, predicted_revenue, model_used FROM forecast_predictions ORDER BY forecast_date")
@@ -492,9 +499,10 @@ with tab_forecast:
 # TAB 6: DATA QUALITY
 # ==============================================================================
 with tab_dq:
-    st.markdown("### 🛡️ Enterprise Data Quality Report")
+    st.markdown("### 🛡️ Database Health Check")
+    st.caption("Ensuring our store data is perfectly clean, with no missing values or duplicate records.")
     
-    dq_scores = load_data("SELECT * FROM dq_table_scores")
+    dq_scores = load_data("SELECT table_name, score FROM dq_table_scores", table_name="dq_table_scores")
     if not dq_scores.empty:
         overall_score = dq_scores['overall_dq_score'].mean()
         
