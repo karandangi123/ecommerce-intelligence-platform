@@ -4,7 +4,10 @@
 🌟 **Live Streamlit Dashboard:** [https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app](https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app)
 
 <div align="center">
-  <img src="assets/dashboard_preview.png" alt="Olist Executive Dashboard Preview" width="100%">
+  <img src="assets/dashboard_ceo.png" alt="Executive Summary Dashboard" width="100%">
+  <br><br>
+  <img src="assets/dashboard_ops.png" alt="Operations SLA Dashboard" width="49%">
+  <img src="assets/dashboard_mkt.png" alt="Marketing & Retention Dashboard" width="49%">
 </div>
 
 ---
