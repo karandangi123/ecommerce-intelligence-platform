@@ -3,6 +3,10 @@
 
 🌟 **Live Streamlit Dashboard:** [https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app](https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app)
 
+<div align="center">
+  <img src="assets/dashboard_preview.png" alt="Olist Executive Dashboard Preview" width="100%">
+</div>
+
 ---
 
 ## 🚀 Business Value & Key Insights Discovered
