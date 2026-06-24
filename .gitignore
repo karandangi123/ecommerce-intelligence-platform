@@ -1,47 +1,19 @@
-# Virtual Environments
-.venv/
-venv/
-ENV/
-env/
-
-# Databases
-*.db
-*.sqlite
-*.duckdb
-ecommerce_analytics.db
-*.wal
-
-# Data files (Avoid pushing massive CSVs to GitHub)
+# Data files (too large for git)
 data/raw/*.csv
-data/bronze/*.parquet
-data/silver/*.parquet
-data/gold/*.db
-data/gold/*.parquet
-data/**/*.csv
+data/raw/*.zip
 
-# Archives
-archive/
-archive.zip
-
-# Logs and Caches
-*.log
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-.pytest_cache/
-.coverage
-htmlcov/
-
-# OS Files
-.DS_Store
-Thumbs.db
-
-# Secrets
+*.pyc
+.venv/
 .env
-secret.key
 
-# PDFs (Optional, but let's allow the report to be pushed)
-Instacart_ECommerce_Platform_Detailed_Report.pdf
-ECommerce_Intelligence_Interview_Bible.pdf
-comprehensive_project_guide.pdf
-*.pdf
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Dashboard cached data
+dashboard/data/*.json

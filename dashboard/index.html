@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olist Marketplace Intelligence Platform</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js and standard icons CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo-icon">O</div>
+            <div class="logo-text">Olist Intelligence</div>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-item active" onclick="switchTab('ceo')">
+                <span>📊</span> Executive (CEO) View
+            </li>
+            <li class="nav-item" onclick="switchTab('ops')">
+                <span>🚚</span> Operations (SLA) View
+            </li>
+            <li class="nav-item" onclick="switchTab('marketing')">
+                <span>🎯</span> Marketing & Customer
+            </li>
+            <li class="nav-item" onclick="switchTab('geo')">
+                <span>🗺️</span> Geo & Category Strategy
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+        
+        <!-- SECTION 1: EXECUTIVE VIEW -->
+        <section id="ceo-section" class="view-section active">
+            <header>
+                <div class="header-title">
+                    <h1>Executive Summary</h1>
+                    <p>Is the business healthy? Where are the risks?</p>
+                </div>
+            </header>
+            
+            <!-- 6 KPI Cards -->
+            <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="kpi-card">
+                    <div class="kpi-label">LTM Revenue <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Rolling 12 Months)</small></div>
+                    <div class="kpi-value" id="ceo-ltm-revenue">-</div>
+                    <div class="kpi-delta" id="ceo-ltm-revenue-delta">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">LTM Orders <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Rolling 12 Months)</small></div>
+                    <div class="kpi-value" id="ceo-ltm-orders">-</div>
+                    <div class="kpi-delta" id="ceo-ltm-orders-delta">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Monthly Revenue <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="ceo-monthly-revenue">-</div>
+                    <div class="kpi-delta" id="ceo-monthly-revenue-delta">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Monthly Orders <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="ceo-monthly-orders">-</div>
+                    <div class="kpi-delta" id="ceo-monthly-orders-delta">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Avg Order Value <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="ceo-aov">-</div>
+                    <div class="kpi-delta" id="ceo-aov-delta">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">On-Time Delivery Rate <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="ceo-otd">-</div>
+                    <div class="kpi-delta" id="ceo-otd-delta">-</div>
+                </div>
+            </div>
+
+            <!-- Charts & Action lists -->
+            <div class="chart-grid">
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        Revenue & Order Growth Trend
+                        <span class="chart-subtitle">Monthly transaction values & volumes</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="ceo-trend-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        Top 5 Regional Bottlenecks
+                        <span class="chart-subtitle">Worst routes ranked by late delivery rate</span>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Route (From ➔ To)</th>
+                                <th>Shipments</th>
+                                <th>Late Rate</th>
+                                <th>Primary Driver</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ceo-problems-table">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: OPERATIONS VIEW -->
+        <section id="ops-section" class="view-section">
+            <header>
+                <div class="header-title">
+                    <h1>Logistics & Carrier Performance</h1>
+                    <p>Are we delivering on our promise? SLA tracking & root cause.</p>
+                </div>
+            </header>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">On-Time Delivery Rate <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="ops-otd">-</div>
+                    <div class="kpi-delta" id="ops-otd-status">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Avg Delivery Days <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="ops-days">-</div>
+                    <div class="kpi-delta" id="ops-days-status">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Late Delivery Rate <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="ops-late-rate">-</div>
+                    <div class="kpi-delta" id="ops-late-status">-</div>
+                </div>
+            </div>
+
+            <div class="chart-grid">
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        SLA Compliance Trend
+                        <span class="chart-subtitle">Monthly actual vs target delivery days</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="ops-sla-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        Late Delivery Root Cause (Top State Routes)
+                        <span class="chart-subtitle">Logistics delays vs Slow Sellers</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="ops-root-cause-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: MARKETING / CUSTOMER VIEW -->
+        <section id="marketing-section" class="view-section">
+            <header>
+                <div class="header-title">
+                    <h1>Marketing & Customer Health</h1>
+                    <p>Are we acquiring and keeping the right customers?</p>
+                </div>
+            </header>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Repeat Order Share <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="mkt-repeat">-</div>
+                    <div class="kpi-delta" id="mkt-repeat-status">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Avg Review Score <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="mkt-reviews">-</div>
+                    <div class="kpi-delta" id="mkt-reviews-status">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">New Customers Acquired <small style="display: block; font-size: 0.65rem; color: var(--text-secondary); text-transform: none; margin-top: 2px;">(Aug 2018)</small></div>
+                    <div class="kpi-value" id="mkt-acquisition">-</div>
+                    <div class="kpi-delta" id="mkt-acquisition-status">-</div>
+                </div>
+            </div>
+
+            <div class="chart-grid">
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        RFM Segment Distribution
+                        <span class="chart-subtitle">Customer base counts by value tier</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="mkt-rfm-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        Cohort Retention Breakdown (Jan 2017 Cohort)
+                        <span class="chart-subtitle">% of customers returning in subsequent months</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="mkt-retention-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: GEO & CATEGORY VIEW -->
+        <section id="geo-section" class="view-section">
+            <header>
+                <div class="header-title">
+                    <h1>Geographic & Category Performance</h1>
+                    <p>Where and what should we focus on? Profitability & category health.</p>
+                </div>
+            </header>
+
+            <div class="chart-grid">
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        Top Categories by Revenue & Rating
+                        <span class="chart-subtitle">BRL Sales vs Average Customer Rating</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="geo-category-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        Regional Revenue Share (Top 10 States)
+                        <span class="chart-subtitle">Concentration of sales by buyer state</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="geo-state-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-grid chart-grid-full">
+                <div class="chart-panel">
+                    <div class="chart-title">
+                        Payment Method Preferences
+                        <span class="chart-subtitle">Share of transaction values over time</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="geo-payments-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- App Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>

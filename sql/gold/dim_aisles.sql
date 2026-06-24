@@ -1,4 +1,0 @@
-CREATE TABLE IF NOT EXISTS dim_aisles (
-    aisle_id INTEGER PRIMARY KEY,
-    aisle VARCHAR NOT NULL
-);
