@@ -159,12 +159,18 @@ with tab_ceo:
         
         # Display Metrics
         st.subheader("Executive Summary (Aug 2018)")
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3, col4, col5 = st.columns(5)
         
         col1.metric("LTM Revenue", format_currency(ltm_revenue), f"{ltm_rev_growth:.1f}% MoM (LTM)")
         col2.metric("LTM Orders", format_num(ltm_orders), f"{ltm_ord_growth:.1f}% MoM (LTM)")
         col3.metric("Monthly Revenue", format_currency(active_month['total_revenue']), f"{active_month['mom_revenue_growth_pct']:.1f}% MoM")
         col4.metric("Monthly Orders", format_num(active_month['total_orders']), f"{active_month['mom_orders_growth_pct']:.1f}% MoM")
+        
+        # Calculate AOV
+        aov = active_month['total_revenue'] / max(1, active_month['total_orders'])
+        prev_aov = prev_month['total_revenue'] / max(1, prev_month['total_orders'])
+        aov_growth = ((aov - prev_aov) / prev_aov) * 100 if prev_aov > 0 else 0
+        col5.metric("Avg Order Value", f"R${aov:.2f}", f"{aov_growth:.1f}% MoM")
         
         # Trend Chart
         st.markdown("### Revenue & Orders Trend")
@@ -255,6 +261,7 @@ with tab_mkt:
         with col_m2:
             if not cohort_data.empty:
                 st.markdown("### Cohort Retention (Jan 2017)")
+                st.info("💡 **How to read:** 0.4% retention means exactly 4 out of 1000 customers from this cohort returned to buy again this month. (Olist has naturally low retention).")
                 jan_cohort = cohort_data[cohort_data['cohort_month'] == '2017-01-01'].copy()
                 max_idx = max(jan_cohort['cohort_index'].max(), 12)
                 # Pad missing months with 0
@@ -264,7 +271,7 @@ with tab_mkt:
                 fig_cohort = go.Figure()
                 fig_cohort.add_trace(go.Scatter(x="Month " + jan_full['cohort_index'].astype(str), y=jan_full['retention_pct'], fill='tozeroy', marker_color='#10b981'))
                 fig_cohort.update_layout(**chart_layout)
-                fig_cohort.update_layout(yaxis=dict(range=[0, 1.2], showgrid=True, gridcolor='rgba(255,255,255,0.05)', zeroline=False), height=350)
+                fig_cohort.update_layout(yaxis=dict(range=[0, 1.2], ticksuffix='%', showgrid=True, gridcolor='rgba(255,255,255,0.05)', zeroline=False), height=350)
                 st.plotly_chart(fig_cohort, use_container_width=True)
 
 # --- 4. GEO & CATEGORIES TAB ---
