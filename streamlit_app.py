@@ -10,7 +10,7 @@ st.set_page_config(page_title="Olist Marketplace Intelligence", layout="wide", i
 st.title("Olist Marketplace Intelligence Platform")
 
 # Path to the exported JSON data
-DATA_DIR = os.path.join(os.path.dirname(__file__), "dashboard", "data")
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard", "data")
 
 @st.cache_data
 def load_data(filename):

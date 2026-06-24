@@ -1,0 +1,177 @@
+[
+  {
+    "order_month": "2016-09-01",
+    "new_customers_acquired": 2,
+    "total_orders": 2,
+    "repeat_order_share_pct": 0.0,
+    "avg_review_score": 1.0
+  },
+  {
+    "order_month": "2016-10-01",
+    "new_customers_acquired": 290,
+    "total_orders": 293,
+    "repeat_order_share_pct": 1.02,
+    "avg_review_score": 3.57
+  },
+  {
+    "order_month": "2016-12-01",
+    "new_customers_acquired": 1,
+    "total_orders": 1,
+    "repeat_order_share_pct": 0.0,
+    "avg_review_score": 5.0
+  },
+  {
+    "order_month": "2017-01-01",
+    "new_customers_acquired": 752,
+    "total_orders": 787,
+    "repeat_order_share_pct": 4.45,
+    "avg_review_score": 4.07
+  },
+  {
+    "order_month": "2017-02-01",
+    "new_customers_acquired": 1690,
+    "total_orders": 1718,
+    "repeat_order_share_pct": 1.63,
+    "avg_review_score": 4.02
+  },
+  {
+    "order_month": "2017-03-01",
+    "new_customers_acquired": 2571,
+    "total_orders": 2617,
+    "repeat_order_share_pct": 1.76,
+    "avg_review_score": 4.07
+  },
+  {
+    "order_month": "2017-04-01",
+    "new_customers_acquired": 2325,
+    "total_orders": 2377,
+    "repeat_order_share_pct": 2.19,
+    "avg_review_score": 4.04
+  },
+  {
+    "order_month": "2017-05-01",
+    "new_customers_acquired": 3541,
+    "total_orders": 3640,
+    "repeat_order_share_pct": 2.72,
+    "avg_review_score": 4.14
+  },
+  {
+    "order_month": "2017-06-01",
+    "new_customers_acquired": 3102,
+    "total_orders": 3205,
+    "repeat_order_share_pct": 3.21,
+    "avg_review_score": 4.15
+  },
+  {
+    "order_month": "2017-07-01",
+    "new_customers_acquired": 3822,
+    "total_orders": 3946,
+    "repeat_order_share_pct": 3.14,
+    "avg_review_score": 4.17
+  },
+  {
+    "order_month": "2017-08-01",
+    "new_customers_acquired": 4130,
+    "total_orders": 4272,
+    "repeat_order_share_pct": 3.32,
+    "avg_review_score": 4.24
+  },
+  {
+    "order_month": "2017-09-01",
+    "new_customers_acquired": 4075,
+    "total_orders": 4227,
+    "repeat_order_share_pct": 3.6,
+    "avg_review_score": 4.19
+  },
+  {
+    "order_month": "2017-10-01",
+    "new_customers_acquired": 4392,
+    "total_orders": 4547,
+    "repeat_order_share_pct": 3.41,
+    "avg_review_score": 4.12
+  },
+  {
+    "order_month": "2017-11-01",
+    "new_customers_acquired": 7190,
+    "total_orders": 7423,
+    "repeat_order_share_pct": 3.14,
+    "avg_review_score": 3.91
+  },
+  {
+    "order_month": "2017-12-01",
+    "new_customers_acquired": 5439,
+    "total_orders": 5620,
+    "repeat_order_share_pct": 3.22,
+    "avg_review_score": 4.02
+  },
+  {
+    "order_month": "2018-01-01",
+    "new_customers_acquired": 6951,
+    "total_orders": 7187,
+    "repeat_order_share_pct": 3.28,
+    "avg_review_score": 4.04
+  },
+  {
+    "order_month": "2018-02-01",
+    "new_customers_acquired": 6357,
+    "total_orders": 6625,
+    "repeat_order_share_pct": 4.05,
+    "avg_review_score": 3.83
+  },
+  {
+    "order_month": "2018-03-01",
+    "new_customers_acquired": 6931,
+    "total_orders": 7168,
+    "repeat_order_share_pct": 3.31,
+    "avg_review_score": 3.75
+  },
+  {
+    "order_month": "2018-04-01",
+    "new_customers_acquired": 6698,
+    "total_orders": 6919,
+    "repeat_order_share_pct": 3.19,
+    "avg_review_score": 4.16
+  },
+  {
+    "order_month": "2018-05-01",
+    "new_customers_acquired": 6586,
+    "total_orders": 6833,
+    "repeat_order_share_pct": 3.61,
+    "avg_review_score": 4.19
+  },
+  {
+    "order_month": "2018-06-01",
+    "new_customers_acquired": 5920,
+    "total_orders": 6145,
+    "repeat_order_share_pct": 3.66,
+    "avg_review_score": 4.28
+  },
+  {
+    "order_month": "2018-07-01",
+    "new_customers_acquired": 6016,
+    "total_orders": 6233,
+    "repeat_order_share_pct": 3.48,
+    "avg_review_score": 4.26
+  },
+  {
+    "order_month": "2018-08-01",
+    "new_customers_acquired": 6209,
+    "total_orders": 6421,
+    "repeat_order_share_pct": 3.3,
+    "avg_review_score": 4.26
+  },
+  {
+    "order_month": "2018-09-01",
+    "new_customers_acquired": 0,
+    "total_orders": 1,
+    "repeat_order_share_pct": 100.0,
+    "avg_review_score": 1.8
+  },
+  {
+    "order_month": "2018-10-01",
+    "new_customers_acquired": 0,
+    "total_orders": 0,
+    "repeat_order_share_pct": null,
+    "avg_review_score": 2.25
+  }
+]

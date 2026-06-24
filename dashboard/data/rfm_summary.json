@@ -1,0 +1,50 @@
+[
+  {
+    "rfm_segment": "New / Recent",
+    "customer_count": 45911,
+    "customer_share_pct": 48.33,
+    "total_revenue": 7436412.7,
+    "revenue_share_pct": 47.25,
+    "aov": 161.97
+  },
+  {
+    "rfm_segment": "About to Sleep / Cold",
+    "customer_count": 40126,
+    "customer_share_pct": 42.24,
+    "total_revenue": 7147014.21,
+    "revenue_share_pct": 45.41,
+    "aov": 178.11
+  },
+  {
+    "rfm_segment": "At Risk / Can't Lose",
+    "customer_count": 1305,
+    "customer_share_pct": 1.37,
+    "total_revenue": 393293.91,
+    "revenue_share_pct": 2.5,
+    "aov": 301.37
+  },
+  {
+    "rfm_segment": "Lost",
+    "customer_count": 6065,
+    "customer_share_pct": 6.38,
+    "total_revenue": 265175.98,
+    "revenue_share_pct": 1.68,
+    "aov": 43.72
+  },
+  {
+    "rfm_segment": "Champions",
+    "customer_count": 722,
+    "customer_share_pct": 0.76,
+    "total_revenue": 257882.45,
+    "revenue_share_pct": 1.64,
+    "aov": 357.18
+  },
+  {
+    "rfm_segment": "Loyal",
+    "customer_count": 861,
+    "customer_share_pct": 0.91,
+    "total_revenue": 239357.76,
+    "revenue_share_pct": 1.52,
+    "aov": 278.0
+  }
+]

@@ -16,4 +16,3 @@ __pycache__/
 .idea/
 
 # Dashboard cached data
-dashboard/data/*.json

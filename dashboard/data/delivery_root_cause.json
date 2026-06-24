@@ -1,0 +1,659 @@
+[
+  {
+    "seller_state": "SP",
+    "customer_state": "AL",
+    "total_deliveries": 265,
+    "total_late_deliveries": 67,
+    "late_delivery_rate_pct": 25.28,
+    "seller_fault_share_pct": 11.94,
+    "carrier_fault_share_pct": 88.06
+  },
+  {
+    "seller_state": "MA",
+    "customer_state": "SP",
+    "total_deliveries": 125,
+    "total_late_deliveries": 31,
+    "late_delivery_rate_pct": 24.8,
+    "seller_fault_share_pct": 87.1,
+    "carrier_fault_share_pct": 12.9
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "MA",
+    "total_deliveries": 509,
+    "total_late_deliveries": 104,
+    "late_delivery_rate_pct": 20.43,
+    "seller_fault_share_pct": 17.31,
+    "carrier_fault_share_pct": 82.69
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "PI",
+    "total_deliveries": 338,
+    "total_late_deliveries": 60,
+    "late_delivery_rate_pct": 17.75,
+    "seller_fault_share_pct": 21.67,
+    "carrier_fault_share_pct": 78.33
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "BA",
+    "total_deliveries": 146,
+    "total_late_deliveries": 24,
+    "late_delivery_rate_pct": 16.44,
+    "seller_fault_share_pct": 33.33,
+    "carrier_fault_share_pct": 66.67
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SE",
+    "total_deliveries": 212,
+    "total_late_deliveries": 34,
+    "late_delivery_rate_pct": 16.04,
+    "seller_fault_share_pct": 20.59,
+    "carrier_fault_share_pct": 79.41
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "RJ",
+    "total_deliveries": 8476,
+    "total_late_deliveries": 1270,
+    "late_delivery_rate_pct": 14.98,
+    "seller_fault_share_pct": 20.63,
+    "carrier_fault_share_pct": 79.37
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "CE",
+    "total_deliveries": 1006,
+    "total_late_deliveries": 148,
+    "late_delivery_rate_pct": 14.71,
+    "seller_fault_share_pct": 12.16,
+    "carrier_fault_share_pct": 87.84
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "MS",
+    "total_deliveries": 485,
+    "total_late_deliveries": 70,
+    "late_delivery_rate_pct": 14.43,
+    "seller_fault_share_pct": 17.14,
+    "carrier_fault_share_pct": 82.86
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "BA",
+    "total_deliveries": 2397,
+    "total_late_deliveries": 345,
+    "late_delivery_rate_pct": 14.39,
+    "seller_fault_share_pct": 12.46,
+    "carrier_fault_share_pct": 87.54
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "ES",
+    "total_deliveries": 1495,
+    "total_late_deliveries": 208,
+    "late_delivery_rate_pct": 13.91,
+    "seller_fault_share_pct": 16.35,
+    "carrier_fault_share_pct": 83.65
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "RJ",
+    "total_deliveries": 1003,
+    "total_late_deliveries": 135,
+    "late_delivery_rate_pct": 13.46,
+    "seller_fault_share_pct": 23.7,
+    "carrier_fault_share_pct": 76.3
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "PA",
+    "total_deliveries": 702,
+    "total_late_deliveries": 91,
+    "late_delivery_rate_pct": 12.96,
+    "seller_fault_share_pct": 15.38,
+    "carrier_fault_share_pct": 84.62
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "TO",
+    "total_deliveries": 206,
+    "total_late_deliveries": 25,
+    "late_delivery_rate_pct": 12.14,
+    "seller_fault_share_pct": 20.0,
+    "carrier_fault_share_pct": 80.0
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "RN",
+    "total_deliveries": 341,
+    "total_late_deliveries": 40,
+    "late_delivery_rate_pct": 11.73,
+    "seller_fault_share_pct": 17.5,
+    "carrier_fault_share_pct": 82.5
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "BA",
+    "total_deliveries": 135,
+    "total_late_deliveries": 15,
+    "late_delivery_rate_pct": 11.11,
+    "seller_fault_share_pct": 13.33,
+    "carrier_fault_share_pct": 86.67
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SC",
+    "total_deliveries": 2372,
+    "total_late_deliveries": 256,
+    "late_delivery_rate_pct": 10.79,
+    "seller_fault_share_pct": 21.48,
+    "carrier_fault_share_pct": 78.52
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "PB",
+    "total_deliveries": 348,
+    "total_late_deliveries": 37,
+    "late_delivery_rate_pct": 10.63,
+    "seller_fault_share_pct": 10.81,
+    "carrier_fault_share_pct": 89.19
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "BA",
+    "total_deliveries": 373,
+    "total_late_deliveries": 39,
+    "late_delivery_rate_pct": 10.46,
+    "seller_fault_share_pct": 23.08,
+    "carrier_fault_share_pct": 76.92
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "PE",
+    "total_deliveries": 1164,
+    "total_late_deliveries": 121,
+    "late_delivery_rate_pct": 10.4,
+    "seller_fault_share_pct": 18.18,
+    "carrier_fault_share_pct": 81.82
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "SC",
+    "total_deliveries": 116,
+    "total_late_deliveries": 12,
+    "late_delivery_rate_pct": 10.34,
+    "seller_fault_share_pct": 8.33,
+    "carrier_fault_share_pct": 91.67
+  },
+  {
+    "seller_state": "SC",
+    "customer_state": "RJ",
+    "total_deliveries": 481,
+    "total_late_deliveries": 48,
+    "late_delivery_rate_pct": 9.98,
+    "seller_fault_share_pct": 20.83,
+    "carrier_fault_share_pct": 79.17
+  },
+  {
+    "seller_state": "ES",
+    "customer_state": "SP",
+    "total_deliveries": 102,
+    "total_late_deliveries": 10,
+    "late_delivery_rate_pct": 9.8,
+    "seller_fault_share_pct": 0.0,
+    "carrier_fault_share_pct": 100.0
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "RS",
+    "total_deliveries": 201,
+    "total_late_deliveries": 19,
+    "late_delivery_rate_pct": 9.45,
+    "seller_fault_share_pct": 31.58,
+    "carrier_fault_share_pct": 68.42
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "ES",
+    "total_deliveries": 110,
+    "total_late_deliveries": 10,
+    "late_delivery_rate_pct": 9.09,
+    "seller_fault_share_pct": 30.0,
+    "carrier_fault_share_pct": 70.0
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "RJ",
+    "total_deliveries": 1184,
+    "total_late_deliveries": 107,
+    "late_delivery_rate_pct": 9.04,
+    "seller_fault_share_pct": 18.69,
+    "carrier_fault_share_pct": 81.31
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "GO",
+    "total_deliveries": 1472,
+    "total_late_deliveries": 131,
+    "late_delivery_rate_pct": 8.9,
+    "seller_fault_share_pct": 21.37,
+    "carrier_fault_share_pct": 78.63
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "SP",
+    "total_deliveries": 1351,
+    "total_late_deliveries": 120,
+    "late_delivery_rate_pct": 8.88,
+    "seller_fault_share_pct": 20.0,
+    "carrier_fault_share_pct": 80.0
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "PR",
+    "total_deliveries": 205,
+    "total_late_deliveries": 18,
+    "late_delivery_rate_pct": 8.78,
+    "seller_fault_share_pct": 11.11,
+    "carrier_fault_share_pct": 88.89
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "SC",
+    "total_deliveries": 256,
+    "total_late_deliveries": 22,
+    "late_delivery_rate_pct": 8.59,
+    "seller_fault_share_pct": 31.82,
+    "carrier_fault_share_pct": 68.18
+  },
+  {
+    "seller_state": "RS",
+    "customer_state": "RJ",
+    "total_deliveries": 250,
+    "total_late_deliveries": 21,
+    "late_delivery_rate_pct": 8.4,
+    "seller_fault_share_pct": 42.86,
+    "carrier_fault_share_pct": 57.14
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "DF",
+    "total_deliveries": 1417,
+    "total_late_deliveries": 114,
+    "late_delivery_rate_pct": 8.05,
+    "seller_fault_share_pct": 28.95,
+    "carrier_fault_share_pct": 71.05
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "PE",
+    "total_deliveries": 113,
+    "total_late_deliveries": 9,
+    "late_delivery_rate_pct": 7.96,
+    "seller_fault_share_pct": 44.44,
+    "carrier_fault_share_pct": 55.56
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "DF",
+    "total_deliveries": 102,
+    "total_late_deliveries": 8,
+    "late_delivery_rate_pct": 7.84,
+    "seller_fault_share_pct": 12.5,
+    "carrier_fault_share_pct": 87.5
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "RS",
+    "total_deliveries": 3685,
+    "total_late_deliveries": 273,
+    "late_delivery_rate_pct": 7.41,
+    "seller_fault_share_pct": 19.05,
+    "carrier_fault_share_pct": 80.95
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "GO",
+    "total_deliveries": 110,
+    "total_late_deliveries": 8,
+    "late_delivery_rate_pct": 7.27,
+    "seller_fault_share_pct": 25.0,
+    "carrier_fault_share_pct": 75.0
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "MG",
+    "total_deliveries": 562,
+    "total_late_deliveries": 40,
+    "late_delivery_rate_pct": 7.12,
+    "seller_fault_share_pct": 17.5,
+    "carrier_fault_share_pct": 82.5
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "MT",
+    "total_deliveries": 672,
+    "total_late_deliveries": 45,
+    "late_delivery_rate_pct": 6.7,
+    "seller_fault_share_pct": 17.78,
+    "carrier_fault_share_pct": 82.22
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "SC",
+    "total_deliveries": 399,
+    "total_late_deliveries": 26,
+    "late_delivery_rate_pct": 6.52,
+    "seller_fault_share_pct": 34.62,
+    "carrier_fault_share_pct": 65.38
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "RJ",
+    "total_deliveries": 980,
+    "total_late_deliveries": 62,
+    "late_delivery_rate_pct": 6.33,
+    "seller_fault_share_pct": 32.26,
+    "carrier_fault_share_pct": 67.74
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "MG",
+    "total_deliveries": 7611,
+    "total_late_deliveries": 474,
+    "late_delivery_rate_pct": 6.23,
+    "seller_fault_share_pct": 27.22,
+    "carrier_fault_share_pct": 72.78
+  },
+  {
+    "seller_state": "SC",
+    "customer_state": "SC",
+    "total_deliveries": 259,
+    "total_late_deliveries": 16,
+    "late_delivery_rate_pct": 6.18,
+    "seller_fault_share_pct": 43.75,
+    "carrier_fault_share_pct": 56.25
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "total_deliveries": 31443,
+    "total_late_deliveries": 1917,
+    "late_delivery_rate_pct": 6.1,
+    "seller_fault_share_pct": 38.08,
+    "carrier_fault_share_pct": 61.92
+  },
+  {
+    "seller_state": "SC",
+    "customer_state": "RS",
+    "total_deliveries": 300,
+    "total_late_deliveries": 18,
+    "late_delivery_rate_pct": 6.0,
+    "seller_fault_share_pct": 5.56,
+    "carrier_fault_share_pct": 94.44
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "PR",
+    "total_deliveries": 3183,
+    "total_late_deliveries": 167,
+    "late_delivery_rate_pct": 5.25,
+    "seller_fault_share_pct": 23.35,
+    "carrier_fault_share_pct": 76.65
+  },
+  {
+    "seller_state": "RS",
+    "customer_state": "RS",
+    "total_deliveries": 289,
+    "total_late_deliveries": 15,
+    "late_delivery_rate_pct": 5.19,
+    "seller_fault_share_pct": 46.67,
+    "carrier_fault_share_pct": 53.33
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "MG",
+    "total_deliveries": 836,
+    "total_late_deliveries": 43,
+    "late_delivery_rate_pct": 5.14,
+    "seller_fault_share_pct": 62.79,
+    "carrier_fault_share_pct": 37.21
+  },
+  {
+    "seller_state": "BA",
+    "customer_state": "SP",
+    "total_deliveries": 139,
+    "total_late_deliveries": 7,
+    "late_delivery_rate_pct": 5.04,
+    "seller_fault_share_pct": 14.29,
+    "carrier_fault_share_pct": 85.71
+  },
+  {
+    "seller_state": "SC",
+    "customer_state": "MG",
+    "total_deliveries": 437,
+    "total_late_deliveries": 22,
+    "late_delivery_rate_pct": 5.03,
+    "seller_fault_share_pct": 45.45,
+    "carrier_fault_share_pct": 54.55
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "RS",
+    "total_deliveries": 599,
+    "total_late_deliveries": 30,
+    "late_delivery_rate_pct": 5.01,
+    "seller_fault_share_pct": 36.67,
+    "carrier_fault_share_pct": 63.33
+  },
+  {
+    "seller_state": "RS",
+    "customer_state": "PR",
+    "total_deliveries": 141,
+    "total_late_deliveries": 7,
+    "late_delivery_rate_pct": 4.96,
+    "seller_fault_share_pct": 57.14,
+    "carrier_fault_share_pct": 42.86
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "RS",
+    "total_deliveries": 284,
+    "total_late_deliveries": 14,
+    "late_delivery_rate_pct": 4.93,
+    "seller_fault_share_pct": 21.43,
+    "carrier_fault_share_pct": 78.57
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "ES",
+    "total_deliveries": 178,
+    "total_late_deliveries": 8,
+    "late_delivery_rate_pct": 4.49,
+    "seller_fault_share_pct": 37.5,
+    "carrier_fault_share_pct": 62.5
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "PR",
+    "total_deliveries": 726,
+    "total_late_deliveries": 31,
+    "late_delivery_rate_pct": 4.27,
+    "seller_fault_share_pct": 54.84,
+    "carrier_fault_share_pct": 45.16
+  },
+  {
+    "seller_state": "SC",
+    "customer_state": "SP",
+    "total_deliveries": 1339,
+    "total_late_deliveries": 57,
+    "late_delivery_rate_pct": 4.26,
+    "seller_fault_share_pct": 38.6,
+    "carrier_fault_share_pct": 61.4
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "SP",
+    "total_deliveries": 2606,
+    "total_late_deliveries": 110,
+    "late_delivery_rate_pct": 4.22,
+    "seller_fault_share_pct": 39.09,
+    "carrier_fault_share_pct": 60.91
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "AM",
+    "total_deliveries": 100,
+    "total_late_deliveries": 4,
+    "late_delivery_rate_pct": 4.0,
+    "seller_fault_share_pct": 25.0,
+    "carrier_fault_share_pct": 75.0
+  },
+  {
+    "seller_state": "GO",
+    "customer_state": "SP",
+    "total_deliveries": 128,
+    "total_late_deliveries": 5,
+    "late_delivery_rate_pct": 3.91,
+    "seller_fault_share_pct": 0.0,
+    "carrier_fault_share_pct": 100.0
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "DF",
+    "total_deliveries": 154,
+    "total_late_deliveries": 6,
+    "late_delivery_rate_pct": 3.9,
+    "seller_fault_share_pct": 50.0,
+    "carrier_fault_share_pct": 50.0
+  },
+  {
+    "seller_state": "PR",
+    "customer_state": "SP",
+    "total_deliveries": 2994,
+    "total_late_deliveries": 104,
+    "late_delivery_rate_pct": 3.47,
+    "seller_fault_share_pct": 55.77,
+    "carrier_fault_share_pct": 44.23
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "MG",
+    "total_deliveries": 1550,
+    "total_late_deliveries": 50,
+    "late_delivery_rate_pct": 3.23,
+    "seller_fault_share_pct": 40.0,
+    "carrier_fault_share_pct": 60.0
+  },
+  {
+    "seller_state": "SC",
+    "customer_state": "PR",
+    "total_deliveries": 289,
+    "total_late_deliveries": 9,
+    "late_delivery_rate_pct": 3.11,
+    "seller_fault_share_pct": 11.11,
+    "carrier_fault_share_pct": 88.89
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "RO",
+    "total_deliveries": 171,
+    "total_late_deliveries": 5,
+    "late_delivery_rate_pct": 2.92,
+    "seller_fault_share_pct": 0.0,
+    "carrier_fault_share_pct": 100.0
+  },
+  {
+    "seller_state": "DF",
+    "customer_state": "SP",
+    "total_deliveries": 309,
+    "total_late_deliveries": 9,
+    "late_delivery_rate_pct": 2.91,
+    "seller_fault_share_pct": 44.44,
+    "carrier_fault_share_pct": 55.56
+  },
+  {
+    "seller_state": "PE",
+    "customer_state": "SP",
+    "total_deliveries": 104,
+    "total_late_deliveries": 3,
+    "late_delivery_rate_pct": 2.88,
+    "seller_fault_share_pct": 33.33,
+    "carrier_fault_share_pct": 66.67
+  },
+  {
+    "seller_state": "RS",
+    "customer_state": "MG",
+    "total_deliveries": 189,
+    "total_late_deliveries": 5,
+    "late_delivery_rate_pct": 2.65,
+    "seller_fault_share_pct": 40.0,
+    "carrier_fault_share_pct": 60.0
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "GO",
+    "total_deliveries": 153,
+    "total_late_deliveries": 4,
+    "late_delivery_rate_pct": 2.61,
+    "seller_fault_share_pct": 25.0,
+    "carrier_fault_share_pct": 75.0
+  },
+  {
+    "seller_state": "RS",
+    "customer_state": "SP",
+    "total_deliveries": 677,
+    "total_late_deliveries": 15,
+    "late_delivery_rate_pct": 2.22,
+    "seller_fault_share_pct": 40.0,
+    "carrier_fault_share_pct": 60.0
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "DF",
+    "total_deliveries": 192,
+    "total_late_deliveries": 4,
+    "late_delivery_rate_pct": 2.08,
+    "seller_fault_share_pct": 25.0,
+    "carrier_fault_share_pct": 75.0
+  },
+  {
+    "seller_state": "RJ",
+    "customer_state": "ES",
+    "total_deliveries": 100,
+    "total_late_deliveries": 2,
+    "late_delivery_rate_pct": 2.0,
+    "seller_fault_share_pct": 0.0,
+    "carrier_fault_share_pct": 100.0
+  },
+  {
+    "seller_state": "MG",
+    "customer_state": "PR",
+    "total_deliveries": 368,
+    "total_late_deliveries": 7,
+    "late_delivery_rate_pct": 1.9,
+    "seller_fault_share_pct": 14.29,
+    "carrier_fault_share_pct": 85.71
+  },
+  {
+    "seller_state": "DF",
+    "customer_state": "MG",
+    "total_deliveries": 103,
+    "total_late_deliveries": 1,
+    "late_delivery_rate_pct": 0.97,
+    "seller_fault_share_pct": 0.0,
+    "carrier_fault_share_pct": 100.0
+  },
+  {
+    "seller_state": "RS",
+    "customer_state": "SC",
+    "total_deliveries": 116,
+    "total_late_deliveries": 0,
+    "late_delivery_rate_pct": 0.0,
+    "seller_fault_share_pct": null,
+    "carrier_fault_share_pct": null
+  }
+]

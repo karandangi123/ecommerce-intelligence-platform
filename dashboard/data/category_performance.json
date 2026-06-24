@@ -1,0 +1,92 @@
+[
+  {
+    "category_english": "health_beauty",
+    "revenue": 1255695.13,
+    "avg_review_score": 4.15,
+    "total_orders": 8800
+  },
+  {
+    "category_english": "watches_gifts",
+    "revenue": 1198185.21,
+    "avg_review_score": 4.03,
+    "total_orders": 5604
+  },
+  {
+    "category_english": "bed_bath_table",
+    "revenue": 1035964.06,
+    "avg_review_score": 3.9,
+    "total_orders": 9399
+  },
+  {
+    "category_english": "sports_leisure",
+    "revenue": 979740.92,
+    "avg_review_score": 4.12,
+    "total_orders": 7673
+  },
+  {
+    "category_english": "computers_accessories",
+    "revenue": 904322.02,
+    "avg_review_score": 3.95,
+    "total_orders": 6654
+  },
+  {
+    "category_english": "furniture_decor",
+    "revenue": 727465.05,
+    "avg_review_score": 3.92,
+    "total_orders": 6425
+  },
+  {
+    "category_english": "housewares",
+    "revenue": 626825.8,
+    "avg_review_score": 4.07,
+    "total_orders": 5847
+  },
+  {
+    "category_english": "cool_stuff",
+    "revenue": 620770.49,
+    "avg_review_score": 4.16,
+    "total_orders": 3616
+  },
+  {
+    "category_english": "auto",
+    "revenue": 586585.73,
+    "avg_review_score": 4.08,
+    "total_orders": 3872
+  },
+  {
+    "category_english": "garden_tools",
+    "revenue": 481009.94,
+    "avg_review_score": 4.06,
+    "total_orders": 3505
+  },
+  {
+    "category_english": "toys",
+    "revenue": 479808.54,
+    "avg_review_score": 4.18,
+    "total_orders": 3855
+  },
+  {
+    "category_english": "baby",
+    "revenue": 410312.2,
+    "avg_review_score": 4.03,
+    "total_orders": 2868
+  },
+  {
+    "category_english": "perfumery",
+    "revenue": 396599.31,
+    "avg_review_score": 4.18,
+    "total_orders": 3146
+  },
+  {
+    "category_english": "telephony",
+    "revenue": 322342.64,
+    "avg_review_score": 3.95,
+    "total_orders": 4183
+  },
+  {
+    "category_english": "office_furniture",
+    "revenue": 273580.7,
+    "avg_review_score": 3.49,
+    "total_orders": 1272
+  }
+]

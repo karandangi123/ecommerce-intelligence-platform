@@ -1,0 +1,194 @@
+[
+  {
+    "order_month": "2016-09-01",
+    "total_orders": 2,
+    "total_revenue": 136.23,
+    "avg_order_value": 68.12,
+    "mom_revenue_growth_pct": null,
+    "mom_orders_growth_pct": null
+  },
+  {
+    "order_month": "2016-10-01",
+    "total_orders": 293,
+    "total_revenue": 51657.53,
+    "avg_order_value": 176.31,
+    "mom_revenue_growth_pct": 37819.35,
+    "mom_orders_growth_pct": 14550.0
+  },
+  {
+    "order_month": "2016-12-01",
+    "total_orders": 1,
+    "total_revenue": 19.62,
+    "avg_order_value": 19.62,
+    "mom_revenue_growth_pct": -99.96,
+    "mom_orders_growth_pct": -99.66
+  },
+  {
+    "order_month": "2017-01-01",
+    "total_orders": 787,
+    "total_revenue": 137006.76,
+    "avg_order_value": 174.09,
+    "mom_revenue_growth_pct": 698201.53,
+    "mom_orders_growth_pct": 78600.0
+  },
+  {
+    "order_month": "2017-02-01",
+    "total_orders": 1718,
+    "total_revenue": 283621.94,
+    "avg_order_value": 165.09,
+    "mom_revenue_growth_pct": 107.01,
+    "mom_orders_growth_pct": 118.3
+  },
+  {
+    "order_month": "2017-03-01",
+    "total_orders": 2617,
+    "total_revenue": 425656.4,
+    "avg_order_value": 162.65,
+    "mom_revenue_growth_pct": 50.08,
+    "mom_orders_growth_pct": 52.33
+  },
+  {
+    "order_month": "2017-04-01",
+    "total_orders": 2377,
+    "total_revenue": 405988.38,
+    "avg_order_value": 170.8,
+    "mom_revenue_growth_pct": -4.62,
+    "mom_orders_growth_pct": -9.17
+  },
+  {
+    "order_month": "2017-05-01",
+    "total_orders": 3640,
+    "total_revenue": 582926.16,
+    "avg_order_value": 160.14,
+    "mom_revenue_growth_pct": 43.58,
+    "mom_orders_growth_pct": 53.13
+  },
+  {
+    "order_month": "2017-06-01",
+    "total_orders": 3205,
+    "total_revenue": 499827.47,
+    "avg_order_value": 155.95,
+    "mom_revenue_growth_pct": -14.26,
+    "mom_orders_growth_pct": -11.95
+  },
+  {
+    "order_month": "2017-07-01",
+    "total_orders": 3946,
+    "total_revenue": 578858.58,
+    "avg_order_value": 146.7,
+    "mom_revenue_growth_pct": 15.81,
+    "mom_orders_growth_pct": 23.12
+  },
+  {
+    "order_month": "2017-08-01",
+    "total_orders": 4272,
+    "total_revenue": 662071.77,
+    "avg_order_value": 154.98,
+    "mom_revenue_growth_pct": 14.38,
+    "mom_orders_growth_pct": 8.26
+  },
+  {
+    "order_month": "2017-09-01",
+    "total_orders": 4227,
+    "total_revenue": 717195.22,
+    "avg_order_value": 169.67,
+    "mom_revenue_growth_pct": 8.33,
+    "mom_orders_growth_pct": -1.05
+  },
+  {
+    "order_month": "2017-10-01",
+    "total_orders": 4547,
+    "total_revenue": 764785.28,
+    "avg_order_value": 168.2,
+    "mom_revenue_growth_pct": 6.64,
+    "mom_orders_growth_pct": 7.57
+  },
+  {
+    "order_month": "2017-11-01",
+    "total_orders": 7423,
+    "total_revenue": 1172639.23,
+    "avg_order_value": 157.97,
+    "mom_revenue_growth_pct": 53.33,
+    "mom_orders_growth_pct": 63.25
+  },
+  {
+    "order_month": "2017-12-01",
+    "total_orders": 5620,
+    "total_revenue": 861914.46,
+    "avg_order_value": 153.37,
+    "mom_revenue_growth_pct": -26.5,
+    "mom_orders_growth_pct": -24.29
+  },
+  {
+    "order_month": "2018-01-01",
+    "total_orders": 7187,
+    "total_revenue": 1102639.41,
+    "avg_order_value": 153.42,
+    "mom_revenue_growth_pct": 27.93,
+    "mom_orders_growth_pct": 27.88
+  },
+  {
+    "order_month": "2018-02-01",
+    "total_orders": 6625,
+    "total_revenue": 979966.23,
+    "avg_order_value": 147.92,
+    "mom_revenue_growth_pct": -11.13,
+    "mom_orders_growth_pct": -7.82
+  },
+  {
+    "order_month": "2018-03-01",
+    "total_orders": 7168,
+    "total_revenue": 1152736.74,
+    "avg_order_value": 160.82,
+    "mom_revenue_growth_pct": 17.63,
+    "mom_orders_growth_pct": 8.2
+  },
+  {
+    "order_month": "2018-04-01",
+    "total_orders": 6919,
+    "total_revenue": 1156303.91,
+    "avg_order_value": 167.12,
+    "mom_revenue_growth_pct": 0.31,
+    "mom_orders_growth_pct": -3.47
+  },
+  {
+    "order_month": "2018-05-01",
+    "total_orders": 6833,
+    "total_revenue": 1145748.63,
+    "avg_order_value": 167.68,
+    "mom_revenue_growth_pct": -0.91,
+    "mom_orders_growth_pct": -1.24
+  },
+  {
+    "order_month": "2018-06-01",
+    "total_orders": 6145,
+    "total_revenue": 1020494.29,
+    "avg_order_value": 166.07,
+    "mom_revenue_growth_pct": -10.93,
+    "mom_orders_growth_pct": -10.07
+  },
+  {
+    "order_month": "2018-07-01",
+    "total_orders": 6233,
+    "total_revenue": 1039880.16,
+    "avg_order_value": 166.83,
+    "mom_revenue_growth_pct": 1.9,
+    "mom_orders_growth_pct": 1.43
+  },
+  {
+    "order_month": "2018-08-01",
+    "total_orders": 6421,
+    "total_revenue": 996896.15,
+    "avg_order_value": 155.26,
+    "mom_revenue_growth_pct": -4.13,
+    "mom_orders_growth_pct": 3.02
+  },
+  {
+    "order_month": "2018-09-01",
+    "total_orders": 1,
+    "total_revenue": 166.46,
+    "avg_order_value": 166.46,
+    "mom_revenue_growth_pct": -99.98,
+    "mom_orders_growth_pct": -99.98
+  }
+]

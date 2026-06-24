@@ -1,0 +1,524 @@
+[
+  {
+    "order_month": "2016-09-01",
+    "payment_type": "credit_card",
+    "transaction_count": 1,
+    "payment_value": 136.23
+  },
+  {
+    "order_month": "2016-10-01",
+    "payment_type": "credit_card",
+    "transaction_count": 227,
+    "payment_value": 41371.81
+  },
+  {
+    "order_month": "2016-10-01",
+    "payment_type": "boleto",
+    "transaction_count": 60,
+    "payment_value": 9226.91
+  },
+  {
+    "order_month": "2016-10-01",
+    "payment_type": "voucher",
+    "transaction_count": 22,
+    "payment_value": 817.08
+  },
+  {
+    "order_month": "2016-10-01",
+    "payment_type": "debit_card",
+    "transaction_count": 2,
+    "payment_value": 241.73
+  },
+  {
+    "order_month": "2016-12-01",
+    "payment_type": "credit_card",
+    "transaction_count": 1,
+    "payment_value": 19.62
+  },
+  {
+    "order_month": "2017-01-01",
+    "payment_type": "credit_card",
+    "transaction_count": 574,
+    "payment_value": 108554.84
+  },
+  {
+    "order_month": "2017-01-01",
+    "payment_type": "boleto",
+    "transaction_count": 193,
+    "payment_value": 23685.11
+  },
+  {
+    "order_month": "2017-01-01",
+    "payment_type": "voucher",
+    "transaction_count": 60,
+    "payment_value": 4023.28
+  },
+  {
+    "order_month": "2017-01-01",
+    "payment_type": "debit_card",
+    "transaction_count": 9,
+    "payment_value": 743.53
+  },
+  {
+    "order_month": "2017-02-01",
+    "payment_type": "credit_card",
+    "transaction_count": 1309,
+    "payment_value": 220732.42
+  },
+  {
+    "order_month": "2017-02-01",
+    "payment_type": "boleto",
+    "transaction_count": 383,
+    "payment_value": 55844.85
+  },
+  {
+    "order_month": "2017-02-01",
+    "payment_type": "voucher",
+    "transaction_count": 116,
+    "payment_value": 5534.35
+  },
+  {
+    "order_month": "2017-02-01",
+    "payment_type": "debit_card",
+    "transaction_count": 13,
+    "payment_value": 1510.32
+  },
+  {
+    "order_month": "2017-03-01",
+    "payment_type": "credit_card",
+    "transaction_count": 1959,
+    "payment_value": 333414.12
+  },
+  {
+    "order_month": "2017-03-01",
+    "payment_type": "boleto",
+    "transaction_count": 582,
+    "payment_value": 79110.63
+  },
+  {
+    "order_month": "2017-03-01",
+    "payment_type": "voucher",
+    "transaction_count": 200,
+    "payment_value": 9621.33
+  },
+  {
+    "order_month": "2017-03-01",
+    "payment_type": "debit_card",
+    "transaction_count": 30,
+    "payment_value": 3510.32
+  },
+  {
+    "order_month": "2017-04-01",
+    "payment_type": "credit_card",
+    "transaction_count": 1828,
+    "payment_value": 315030.88
+  },
+  {
+    "order_month": "2017-04-01",
+    "payment_type": "boleto",
+    "transaction_count": 488,
+    "payment_value": 76633.41
+  },
+  {
+    "order_month": "2017-04-01",
+    "payment_type": "voucher",
+    "transaction_count": 201,
+    "payment_value": 11578.56
+  },
+  {
+    "order_month": "2017-04-01",
+    "payment_type": "debit_card",
+    "transaction_count": 26,
+    "payment_value": 2745.53
+  },
+  {
+    "order_month": "2017-05-01",
+    "payment_type": "credit_card",
+    "transaction_count": 2807,
+    "payment_value": 437191.5
+  },
+  {
+    "order_month": "2017-05-01",
+    "payment_type": "boleto",
+    "transaction_count": 758,
+    "payment_value": 126578.03
+  },
+  {
+    "order_month": "2017-05-01",
+    "payment_type": "voucher",
+    "transaction_count": 288,
+    "payment_value": 16133.22
+  },
+  {
+    "order_month": "2017-05-01",
+    "payment_type": "debit_card",
+    "transaction_count": 30,
+    "payment_value": 3023.41
+  },
+  {
+    "order_month": "2017-06-01",
+    "payment_type": "credit_card",
+    "transaction_count": 2428,
+    "payment_value": 377607.57
+  },
+  {
+    "order_month": "2017-06-01",
+    "payment_type": "boleto",
+    "transaction_count": 702,
+    "payment_value": 107052.57
+  },
+  {
+    "order_month": "2017-06-01",
+    "payment_type": "voucher",
+    "transaction_count": 236,
+    "payment_value": 12743.16
+  },
+  {
+    "order_month": "2017-06-01",
+    "payment_type": "debit_card",
+    "transaction_count": 27,
+    "payment_value": 2424.17
+  },
+  {
+    "order_month": "2017-07-01",
+    "payment_type": "credit_card",
+    "transaction_count": 3024,
+    "payment_value": 444244.2
+  },
+  {
+    "order_month": "2017-07-01",
+    "payment_type": "boleto",
+    "transaction_count": 829,
+    "payment_value": 114943.96
+  },
+  {
+    "order_month": "2017-07-01",
+    "payment_type": "voucher",
+    "transaction_count": 349,
+    "payment_value": 17325.39
+  },
+  {
+    "order_month": "2017-07-01",
+    "payment_type": "debit_card",
+    "transaction_count": 22,
+    "payment_value": 2345.03
+  },
+  {
+    "order_month": "2017-08-01",
+    "payment_type": "credit_card",
+    "transaction_count": 3244,
+    "payment_value": 513158.14
+  },
+  {
+    "order_month": "2017-08-01",
+    "payment_type": "boleto",
+    "transaction_count": 920,
+    "payment_value": 131113.02
+  },
+  {
+    "order_month": "2017-08-01",
+    "payment_type": "voucher",
+    "transaction_count": 275,
+    "payment_value": 14663.77
+  },
+  {
+    "order_month": "2017-08-01",
+    "payment_type": "debit_card",
+    "transaction_count": 34,
+    "payment_value": 3136.84
+  },
+  {
+    "order_month": "2017-09-01",
+    "payment_type": "credit_card",
+    "transaction_count": 3243,
+    "payment_value": 566219.62
+  },
+  {
+    "order_month": "2017-09-01",
+    "payment_type": "boleto",
+    "transaction_count": 885,
+    "payment_value": 128845.06
+  },
+  {
+    "order_month": "2017-09-01",
+    "payment_type": "voucher",
+    "transaction_count": 279,
+    "payment_value": 17440.18
+  },
+  {
+    "order_month": "2017-09-01",
+    "payment_type": "debit_card",
+    "transaction_count": 43,
+    "payment_value": 4690.36
+  },
+  {
+    "order_month": "2017-10-01",
+    "payment_type": "credit_card",
+    "transaction_count": 3466,
+    "payment_value": 603228.38
+  },
+  {
+    "order_month": "2017-10-01",
+    "payment_type": "boleto",
+    "transaction_count": 971,
+    "payment_value": 137488.96
+  },
+  {
+    "order_month": "2017-10-01",
+    "payment_type": "voucher",
+    "transaction_count": 280,
+    "payment_value": 18291.37
+  },
+  {
+    "order_month": "2017-10-01",
+    "payment_type": "debit_card",
+    "transaction_count": 52,
+    "payment_value": 5776.57
+  },
+  {
+    "order_month": "2017-11-01",
+    "payment_type": "credit_card",
+    "transaction_count": 5812,
+    "payment_value": 927610.47
+  },
+  {
+    "order_month": "2017-11-01",
+    "payment_type": "boleto",
+    "transaction_count": 1479,
+    "payment_value": 219899.16
+  },
+  {
+    "order_month": "2017-11-01",
+    "payment_type": "voucher",
+    "transaction_count": 382,
+    "payment_value": 19113.22
+  },
+  {
+    "order_month": "2017-11-01",
+    "payment_type": "debit_card",
+    "transaction_count": 67,
+    "payment_value": 6016.38
+  },
+  {
+    "order_month": "2017-12-01",
+    "payment_type": "credit_card",
+    "transaction_count": 4333,
+    "payment_value": 669862.33
+  },
+  {
+    "order_month": "2017-12-01",
+    "payment_type": "boleto",
+    "transaction_count": 1152,
+    "payment_value": 163526.4
+  },
+  {
+    "order_month": "2017-12-01",
+    "payment_type": "voucher",
+    "transaction_count": 291,
+    "payment_value": 21574.07
+  },
+  {
+    "order_month": "2017-12-01",
+    "payment_type": "debit_card",
+    "transaction_count": 63,
+    "payment_value": 6951.66
+  },
+  {
+    "order_month": "2018-01-01",
+    "payment_type": "credit_card",
+    "transaction_count": 5457,
+    "payment_value": 859502.64
+  },
+  {
+    "order_month": "2018-01-01",
+    "payment_type": "boleto",
+    "transaction_count": 1499,
+    "payment_value": 202013.5
+  },
+  {
+    "order_month": "2018-01-01",
+    "payment_type": "voucher",
+    "transaction_count": 412,
+    "payment_value": 29579.72
+  },
+  {
+    "order_month": "2018-01-01",
+    "payment_type": "debit_card",
+    "transaction_count": 109,
+    "payment_value": 11543.55
+  },
+  {
+    "order_month": "2018-02-01",
+    "payment_type": "credit_card",
+    "transaction_count": 5167,
+    "payment_value": 769810.66
+  },
+  {
+    "order_month": "2018-02-01",
+    "payment_type": "boleto",
+    "transaction_count": 1311,
+    "payment_value": 180998.15
+  },
+  {
+    "order_month": "2018-02-01",
+    "payment_type": "voucher",
+    "transaction_count": 300,
+    "payment_value": 21712.67
+  },
+  {
+    "order_month": "2018-02-01",
+    "payment_type": "debit_card",
+    "transaction_count": 68,
+    "payment_value": 7444.75
+  },
+  {
+    "order_month": "2018-03-01",
+    "payment_type": "credit_card",
+    "transaction_count": 5658,
+    "payment_value": 928063.37
+  },
+  {
+    "order_month": "2018-03-01",
+    "payment_type": "boleto",
+    "transaction_count": 1343,
+    "payment_value": 190535.61
+  },
+  {
+    "order_month": "2018-03-01",
+    "payment_type": "voucher",
+    "transaction_count": 390,
+    "payment_value": 25866.5
+  },
+  {
+    "order_month": "2018-03-01",
+    "payment_type": "debit_card",
+    "transaction_count": 77,
+    "payment_value": 8271.26
+  },
+  {
+    "order_month": "2018-04-01",
+    "payment_type": "credit_card",
+    "transaction_count": 5438,
+    "payment_value": 930316.86
+  },
+  {
+    "order_month": "2018-04-01",
+    "payment_type": "boleto",
+    "transaction_count": 1286,
+    "payment_value": 193425.42
+  },
+  {
+    "order_month": "2018-04-01",
+    "payment_type": "voucher",
+    "transaction_count": 368,
+    "payment_value": 21779.1
+  },
+  {
+    "order_month": "2018-04-01",
+    "payment_type": "debit_card",
+    "transaction_count": 97,
+    "payment_value": 10782.53
+  },
+  {
+    "order_month": "2018-05-01",
+    "payment_type": "credit_card",
+    "transaction_count": 5465,
+    "payment_value": 920123.17
+  },
+  {
+    "order_month": "2018-05-01",
+    "payment_type": "boleto",
+    "transaction_count": 1257,
+    "payment_value": 194773.23
+  },
+  {
+    "order_month": "2018-05-01",
+    "payment_type": "voucher",
+    "transaction_count": 316,
+    "payment_value": 21290.44
+  },
+  {
+    "order_month": "2018-05-01",
+    "payment_type": "debit_card",
+    "transaction_count": 50,
+    "payment_value": 9561.79
+  },
+  {
+    "order_month": "2018-06-01",
+    "payment_type": "credit_card",
+    "transaction_count": 4795,
+    "payment_value": 808635.19
+  },
+  {
+    "order_month": "2018-06-01",
+    "payment_type": "boleto",
+    "transaction_count": 1097,
+    "payment_value": 152860.73
+  },
+  {
+    "order_month": "2018-06-01",
+    "payment_type": "debit_card",
+    "transaction_count": 181,
+    "payment_value": 35649.33
+  },
+  {
+    "order_month": "2018-06-01",
+    "payment_type": "voucher",
+    "transaction_count": 324,
+    "payment_value": 23349.04
+  },
+  {
+    "order_month": "2018-07-01",
+    "payment_type": "credit_card",
+    "transaction_count": 4714,
+    "payment_value": 784364.84
+  },
+  {
+    "order_month": "2018-07-01",
+    "payment_type": "boleto",
+    "transaction_count": 1212,
+    "payment_value": 195465.05
+  },
+  {
+    "order_month": "2018-07-01",
+    "payment_type": "debit_card",
+    "transaction_count": 240,
+    "payment_value": 40116.43
+  },
+  {
+    "order_month": "2018-07-01",
+    "payment_type": "voucher",
+    "transaction_count": 280,
+    "payment_value": 19933.84
+  },
+  {
+    "order_month": "2018-08-01",
+    "payment_type": "credit_card",
+    "transaction_count": 4955,
+    "payment_value": 790843.7
+  },
+  {
+    "order_month": "2018-08-01",
+    "payment_type": "boleto",
+    "transaction_count": 1132,
+    "payment_value": 142782.54
+  },
+  {
+    "order_month": "2018-08-01",
+    "payment_type": "debit_card",
+    "transaction_count": 276,
+    "payment_value": 45932.26
+  },
+  {
+    "order_month": "2018-08-01",
+    "payment_type": "voucher",
+    "transaction_count": 243,
+    "payment_value": 17337.65
+  },
+  {
+    "order_month": "2018-09-01",
+    "payment_type": "voucher",
+    "transaction_count": 1,
+    "payment_value": 166.46
+  }
+]

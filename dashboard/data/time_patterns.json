@@ -1,0 +1,1346 @@
+[
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 0.0,
+    "order_count": 260,
+    "total_revenue": 39639.03,
+    "order_share_pct": 0.26
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 1.0,
+    "order_count": 140,
+    "total_revenue": 20784.04,
+    "order_share_pct": 0.14
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 2.0,
+    "order_count": 68,
+    "total_revenue": 11965.82,
+    "order_share_pct": 0.07
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 3.0,
+    "order_count": 43,
+    "total_revenue": 9315.23,
+    "order_share_pct": 0.04
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 4.0,
+    "order_count": 27,
+    "total_revenue": 3914.48,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 5.0,
+    "order_count": 27,
+    "total_revenue": 3605.57,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 6.0,
+    "order_count": 33,
+    "total_revenue": 4742.49,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 7.0,
+    "order_count": 105,
+    "total_revenue": 17854.9,
+    "order_share_pct": 0.11
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 8.0,
+    "order_count": 203,
+    "total_revenue": 34953.32,
+    "order_share_pct": 0.21
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 9.0,
+    "order_count": 343,
+    "total_revenue": 62488.96,
+    "order_share_pct": 0.35
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 10.0,
+    "order_count": 524,
+    "total_revenue": 77350.41,
+    "order_share_pct": 0.53
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 11.0,
+    "order_count": 715,
+    "total_revenue": 102223.18,
+    "order_share_pct": 0.73
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 12.0,
+    "order_count": 669,
+    "total_revenue": 107716.1,
+    "order_share_pct": 0.68
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 13.0,
+    "order_count": 714,
+    "total_revenue": 106830.68,
+    "order_share_pct": 0.73
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 14.0,
+    "order_count": 676,
+    "total_revenue": 112786.26,
+    "order_share_pct": 0.69
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 15.0,
+    "order_count": 707,
+    "total_revenue": 116141.08,
+    "order_share_pct": 0.72
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 16.0,
+    "order_count": 706,
+    "total_revenue": 104334.42,
+    "order_share_pct": 0.72
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 17.0,
+    "order_count": 792,
+    "total_revenue": 122392.63,
+    "order_share_pct": 0.81
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 18.0,
+    "order_count": 888,
+    "total_revenue": 137723.98,
+    "order_share_pct": 0.9
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 19.0,
+    "order_count": 892,
+    "total_revenue": 144073.35,
+    "order_share_pct": 0.91
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 20.0,
+    "order_count": 956,
+    "total_revenue": 152935.13,
+    "order_share_pct": 0.97
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 21.0,
+    "order_count": 876,
+    "total_revenue": 137508.83,
+    "order_share_pct": 0.89
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 22.0,
+    "order_count": 864,
+    "total_revenue": 129426.88,
+    "order_share_pct": 0.88
+  },
+  {
+    "day_of_week": 0.0,
+    "day_name": "Sunday",
+    "hour_of_day": 23.0,
+    "order_count": 603,
+    "total_revenue": 84210.34,
+    "order_share_pct": 0.61
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 0.0,
+    "order_count": 322,
+    "total_revenue": 48029.88,
+    "order_share_pct": 0.33
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 1.0,
+    "order_count": 134,
+    "total_revenue": 18102.83,
+    "order_share_pct": 0.14
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 2.0,
+    "order_count": 64,
+    "total_revenue": 7660.47,
+    "order_share_pct": 0.07
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 3.0,
+    "order_count": 36,
+    "total_revenue": 6848.7,
+    "order_share_pct": 0.04
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 4.0,
+    "order_count": 21,
+    "total_revenue": 2138.02,
+    "order_share_pct": 0.02
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 5.0,
+    "order_count": 22,
+    "total_revenue": 2915.84,
+    "order_share_pct": 0.02
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 6.0,
+    "order_count": 65,
+    "total_revenue": 7070.41,
+    "order_share_pct": 0.07
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 7.0,
+    "order_count": 159,
+    "total_revenue": 21495.36,
+    "order_share_pct": 0.16
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 8.0,
+    "order_count": 475,
+    "total_revenue": 74826.8,
+    "order_share_pct": 0.48
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 9.0,
+    "order_count": 765,
+    "total_revenue": 128839.91,
+    "order_share_pct": 0.78
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 10.0,
+    "order_count": 1020,
+    "total_revenue": 162408.41,
+    "order_share_pct": 1.04
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 11.0,
+    "order_count": 1068,
+    "total_revenue": 170241.83,
+    "order_share_pct": 1.09
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 12.0,
+    "order_count": 961,
+    "total_revenue": 157933.86,
+    "order_share_pct": 0.98
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 13.0,
+    "order_count": 1013,
+    "total_revenue": 158797.84,
+    "order_share_pct": 1.03
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 14.0,
+    "order_count": 1082,
+    "total_revenue": 181135.93,
+    "order_share_pct": 1.1
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 15.0,
+    "order_count": 1065,
+    "total_revenue": 173849.5,
+    "order_share_pct": 1.08
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 16.0,
+    "order_count": 1076,
+    "total_revenue": 173931.53,
+    "order_share_pct": 1.1
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 17.0,
+    "order_count": 974,
+    "total_revenue": 152559.93,
+    "order_share_pct": 0.99
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 18.0,
+    "order_count": 915,
+    "total_revenue": 143439.57,
+    "order_share_pct": 0.93
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 19.0,
+    "order_count": 933,
+    "total_revenue": 157076.8,
+    "order_share_pct": 0.95
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 20.0,
+    "order_count": 1016,
+    "total_revenue": 165445.6,
+    "order_share_pct": 1.03
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 21.0,
+    "order_count": 1103,
+    "total_revenue": 177921.93,
+    "order_share_pct": 1.12
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 22.0,
+    "order_count": 982,
+    "total_revenue": 169446.61,
+    "order_share_pct": 1.0
+  },
+  {
+    "day_of_week": 1.0,
+    "day_name": "Monday",
+    "hour_of_day": 23.0,
+    "order_count": 708,
+    "total_revenue": 116191.47,
+    "order_share_pct": 0.72
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 0.0,
+    "order_count": 304,
+    "total_revenue": 47718.61,
+    "order_share_pct": 0.31
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 1.0,
+    "order_count": 157,
+    "total_revenue": 23959.14,
+    "order_share_pct": 0.16
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 2.0,
+    "order_count": 80,
+    "total_revenue": 9872.94,
+    "order_share_pct": 0.08
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 3.0,
+    "order_count": 28,
+    "total_revenue": 5766.02,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 4.0,
+    "order_count": 28,
+    "total_revenue": 4011.98,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 5.0,
+    "order_count": 24,
+    "total_revenue": 2484.91,
+    "order_share_pct": 0.02
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 6.0,
+    "order_count": 71,
+    "total_revenue": 9440.9,
+    "order_share_pct": 0.07
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 7.0,
+    "order_count": 219,
+    "total_revenue": 30136.94,
+    "order_share_pct": 0.22
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 8.0,
+    "order_count": 515,
+    "total_revenue": 72950.34,
+    "order_share_pct": 0.52
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 9.0,
+    "order_count": 853,
+    "total_revenue": 143927.74,
+    "order_share_pct": 0.87
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 10.0,
+    "order_count": 950,
+    "total_revenue": 156456.86,
+    "order_share_pct": 0.97
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 11.0,
+    "order_count": 1040,
+    "total_revenue": 162477.82,
+    "order_share_pct": 1.06
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 12.0,
+    "order_count": 889,
+    "total_revenue": 143468.57,
+    "order_share_pct": 0.91
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 13.0,
+    "order_count": 1036,
+    "total_revenue": 164947.5,
+    "order_share_pct": 1.05
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 14.0,
+    "order_count": 1106,
+    "total_revenue": 183105.42,
+    "order_share_pct": 1.13
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 15.0,
+    "order_count": 1026,
+    "total_revenue": 159593.73,
+    "order_share_pct": 1.04
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 16.0,
+    "order_count": 1074,
+    "total_revenue": 172365.2,
+    "order_share_pct": 1.09
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 17.0,
+    "order_count": 956,
+    "total_revenue": 157120.07,
+    "order_share_pct": 0.97
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 18.0,
+    "order_count": 868,
+    "total_revenue": 140279.53,
+    "order_share_pct": 0.88
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 19.0,
+    "order_count": 909,
+    "total_revenue": 143875.57,
+    "order_share_pct": 0.93
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 20.0,
+    "order_count": 970,
+    "total_revenue": 163795.33,
+    "order_share_pct": 0.99
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 21.0,
+    "order_count": 1017,
+    "total_revenue": 163620.79,
+    "order_share_pct": 1.04
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 22.0,
+    "order_count": 955,
+    "total_revenue": 155665.62,
+    "order_share_pct": 0.97
+  },
+  {
+    "day_of_week": 2.0,
+    "day_name": "Tuesday",
+    "hour_of_day": 23.0,
+    "order_count": 685,
+    "total_revenue": 105184.05,
+    "order_share_pct": 0.7
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 0.0,
+    "order_count": 392,
+    "total_revenue": 65016.07,
+    "order_share_pct": 0.4
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 1.0,
+    "order_count": 175,
+    "total_revenue": 25702.28,
+    "order_share_pct": 0.18
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 2.0,
+    "order_count": 81,
+    "total_revenue": 10306.86,
+    "order_share_pct": 0.08
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 3.0,
+    "order_count": 31,
+    "total_revenue": 3940.09,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 4.0,
+    "order_count": 33,
+    "total_revenue": 3377.5,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 5.0,
+    "order_count": 26,
+    "total_revenue": 3112.75,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 6.0,
+    "order_count": 93,
+    "total_revenue": 11705.25,
+    "order_share_pct": 0.09
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 7.0,
+    "order_count": 210,
+    "total_revenue": 31843.72,
+    "order_share_pct": 0.21
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 8.0,
+    "order_count": 508,
+    "total_revenue": 80919.2,
+    "order_share_pct": 0.52
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 9.0,
+    "order_count": 817,
+    "total_revenue": 140989.55,
+    "order_share_pct": 0.83
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 10.0,
+    "order_count": 1029,
+    "total_revenue": 166333.59,
+    "order_share_pct": 1.05
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 11.0,
+    "order_count": 1046,
+    "total_revenue": 165132.68,
+    "order_share_pct": 1.07
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 12.0,
+    "order_count": 912,
+    "total_revenue": 143779.61,
+    "order_share_pct": 0.93
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 13.0,
+    "order_count": 1009,
+    "total_revenue": 158014.15,
+    "order_share_pct": 1.03
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 14.0,
+    "order_count": 1039,
+    "total_revenue": 176568.34,
+    "order_share_pct": 1.06
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 15.0,
+    "order_count": 971,
+    "total_revenue": 158075.5,
+    "order_share_pct": 0.99
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 16.0,
+    "order_count": 1024,
+    "total_revenue": 174338.63,
+    "order_share_pct": 1.04
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 17.0,
+    "order_count": 958,
+    "total_revenue": 156868.14,
+    "order_share_pct": 0.98
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 18.0,
+    "order_count": 837,
+    "total_revenue": 156071.59,
+    "order_share_pct": 0.85
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 19.0,
+    "order_count": 833,
+    "total_revenue": 128341.46,
+    "order_share_pct": 0.85
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 20.0,
+    "order_count": 892,
+    "total_revenue": 133634.54,
+    "order_share_pct": 0.91
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 21.0,
+    "order_count": 953,
+    "total_revenue": 142003.04,
+    "order_share_pct": 0.97
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 22.0,
+    "order_count": 872,
+    "total_revenue": 130684.09,
+    "order_share_pct": 0.89
+  },
+  {
+    "day_of_week": 3.0,
+    "day_name": "Wednesday",
+    "hour_of_day": 23.0,
+    "order_count": 612,
+    "total_revenue": 84807.29,
+    "order_share_pct": 0.62
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 0.0,
+    "order_count": 354,
+    "total_revenue": 57685.38,
+    "order_share_pct": 0.36
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 1.0,
+    "order_count": 167,
+    "total_revenue": 22298.39,
+    "order_share_pct": 0.17
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 2.0,
+    "order_count": 74,
+    "total_revenue": 10437.1,
+    "order_share_pct": 0.08
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 3.0,
+    "order_count": 39,
+    "total_revenue": 5400.55,
+    "order_share_pct": 0.04
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 4.0,
+    "order_count": 31,
+    "total_revenue": 4530.63,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 5.0,
+    "order_count": 28,
+    "total_revenue": 3153.73,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 6.0,
+    "order_count": 83,
+    "total_revenue": 9651.21,
+    "order_share_pct": 0.08
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 7.0,
+    "order_count": 217,
+    "total_revenue": 33122.09,
+    "order_share_pct": 0.22
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 8.0,
+    "order_count": 497,
+    "total_revenue": 79936.36,
+    "order_share_pct": 0.51
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 9.0,
+    "order_count": 750,
+    "total_revenue": 117183.36,
+    "order_share_pct": 0.76
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 10.0,
+    "order_count": 970,
+    "total_revenue": 149617.97,
+    "order_share_pct": 0.99
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 11.0,
+    "order_count": 945,
+    "total_revenue": 149874.82,
+    "order_share_pct": 0.96
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 12.0,
+    "order_count": 963,
+    "total_revenue": 161106.85,
+    "order_share_pct": 0.98
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 13.0,
+    "order_count": 968,
+    "total_revenue": 146905.28,
+    "order_share_pct": 0.99
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 14.0,
+    "order_count": 968,
+    "total_revenue": 151061.34,
+    "order_share_pct": 0.99
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 15.0,
+    "order_count": 916,
+    "total_revenue": 150623.48,
+    "order_share_pct": 0.93
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 16.0,
+    "order_count": 1066,
+    "total_revenue": 171560.73,
+    "order_share_pct": 1.09
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 17.0,
+    "order_count": 893,
+    "total_revenue": 144825.48,
+    "order_share_pct": 0.91
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 18.0,
+    "order_count": 776,
+    "total_revenue": 132493.34,
+    "order_share_pct": 0.79
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 19.0,
+    "order_count": 814,
+    "total_revenue": 136624.0,
+    "order_share_pct": 0.83
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 20.0,
+    "order_count": 829,
+    "total_revenue": 134621.91,
+    "order_share_pct": 0.84
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 21.0,
+    "order_count": 832,
+    "total_revenue": 133138.51,
+    "order_share_pct": 0.85
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 22.0,
+    "order_count": 850,
+    "total_revenue": 138404.58,
+    "order_share_pct": 0.87
+  },
+  {
+    "day_of_week": 4.0,
+    "day_name": "Thursday",
+    "hour_of_day": 23.0,
+    "order_count": 541,
+    "total_revenue": 83094.45,
+    "order_share_pct": 0.55
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 0.0,
+    "order_count": 418,
+    "total_revenue": 65202.85,
+    "order_share_pct": 0.43
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 1.0,
+    "order_count": 210,
+    "total_revenue": 39847.96,
+    "order_share_pct": 0.21
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 2.0,
+    "order_count": 70,
+    "total_revenue": 6954.35,
+    "order_share_pct": 0.07
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 3.0,
+    "order_count": 48,
+    "total_revenue": 5633.66,
+    "order_share_pct": 0.05
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 4.0,
+    "order_count": 40,
+    "total_revenue": 5142.38,
+    "order_share_pct": 0.04
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 5.0,
+    "order_count": 35,
+    "total_revenue": 7387.34,
+    "order_share_pct": 0.04
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 6.0,
+    "order_count": 96,
+    "total_revenue": 14272.91,
+    "order_share_pct": 0.1
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 7.0,
+    "order_count": 204,
+    "total_revenue": 26984.84,
+    "order_share_pct": 0.21
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 8.0,
+    "order_count": 493,
+    "total_revenue": 75925.85,
+    "order_share_pct": 0.5
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 9.0,
+    "order_count": 758,
+    "total_revenue": 122543.7,
+    "order_share_pct": 0.77
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 10.0,
+    "order_count": 942,
+    "total_revenue": 151745.03,
+    "order_share_pct": 0.96
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 11.0,
+    "order_count": 983,
+    "total_revenue": 160105.42,
+    "order_share_pct": 1.0
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 12.0,
+    "order_count": 843,
+    "total_revenue": 135105.4,
+    "order_share_pct": 0.86
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 13.0,
+    "order_count": 989,
+    "total_revenue": 159696.01,
+    "order_share_pct": 1.01
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 14.0,
+    "order_count": 950,
+    "total_revenue": 163070.64,
+    "order_share_pct": 0.97
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 15.0,
+    "order_count": 969,
+    "total_revenue": 167874.35,
+    "order_share_pct": 0.99
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 16.0,
+    "order_count": 960,
+    "total_revenue": 176960.27,
+    "order_share_pct": 0.98
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 17.0,
+    "order_count": 807,
+    "total_revenue": 126200.57,
+    "order_share_pct": 0.82
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 18.0,
+    "order_count": 716,
+    "total_revenue": 123931.58,
+    "order_share_pct": 0.73
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 19.0,
+    "order_count": 772,
+    "total_revenue": 124598.92,
+    "order_share_pct": 0.79
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 20.0,
+    "order_count": 730,
+    "total_revenue": 111573.23,
+    "order_share_pct": 0.74
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 21.0,
+    "order_count": 714,
+    "total_revenue": 112686.21,
+    "order_share_pct": 0.73
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 22.0,
+    "order_count": 695,
+    "total_revenue": 109026.42,
+    "order_share_pct": 0.71
+  },
+  {
+    "day_of_week": 5.0,
+    "day_name": "Friday",
+    "hour_of_day": 23.0,
+    "order_count": 507,
+    "total_revenue": 78169.28,
+    "order_share_pct": 0.52
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 0.0,
+    "order_count": 312,
+    "total_revenue": 43929.29,
+    "order_share_pct": 0.32
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 1.0,
+    "order_count": 171,
+    "total_revenue": 23741.62,
+    "order_share_pct": 0.17
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 2.0,
+    "order_count": 66,
+    "total_revenue": 8266.43,
+    "order_share_pct": 0.07
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 3.0,
+    "order_count": 42,
+    "total_revenue": 4218.0,
+    "order_share_pct": 0.04
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 4.0,
+    "order_count": 25,
+    "total_revenue": 5219.08,
+    "order_share_pct": 0.03
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 5.0,
+    "order_count": 23,
+    "total_revenue": 3167.01,
+    "order_share_pct": 0.02
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 6.0,
+    "order_count": 52,
+    "total_revenue": 9639.84,
+    "order_share_pct": 0.05
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 7.0,
+    "order_count": 104,
+    "total_revenue": 17403.23,
+    "order_share_pct": 0.11
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 8.0,
+    "order_count": 248,
+    "total_revenue": 38326.35,
+    "order_share_pct": 0.25
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 9.0,
+    "order_count": 426,
+    "total_revenue": 70039.36,
+    "order_share_pct": 0.43
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 10.0,
+    "order_count": 648,
+    "total_revenue": 106616.59,
+    "order_share_pct": 0.66
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 11.0,
+    "order_count": 701,
+    "total_revenue": 104691.06,
+    "order_share_pct": 0.71
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 12.0,
+    "order_count": 681,
+    "total_revenue": 122968.04,
+    "order_share_pct": 0.69
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 13.0,
+    "order_count": 702,
+    "total_revenue": 112158.66,
+    "order_share_pct": 0.71
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 14.0,
+    "order_count": 670,
+    "total_revenue": 126315.43,
+    "order_share_pct": 0.68
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 15.0,
+    "order_count": 716,
+    "total_revenue": 122855.37,
+    "order_share_pct": 0.73
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 16.0,
+    "order_count": 688,
+    "total_revenue": 109614.9,
+    "order_share_pct": 0.7
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 17.0,
+    "order_count": 694,
+    "total_revenue": 111416.52,
+    "order_share_pct": 0.71
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 18.0,
+    "order_count": 707,
+    "total_revenue": 114956.25,
+    "order_share_pct": 0.72
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 19.0,
+    "order_count": 746,
+    "total_revenue": 119468.88,
+    "order_share_pct": 0.76
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 20.0,
+    "order_count": 723,
+    "total_revenue": 126254.86,
+    "order_share_pct": 0.74
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 21.0,
+    "order_count": 651,
+    "total_revenue": 101536.57,
+    "order_share_pct": 0.66
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 22.0,
+    "order_count": 543,
+    "total_revenue": 81539.3,
+    "order_share_pct": 0.55
+  },
+  {
+    "day_of_week": 6.0,
+    "day_name": "Saturday",
+    "hour_of_day": 23.0,
+    "order_count": 425,
+    "total_revenue": 59786.02,
+    "order_share_pct": 0.43
+  }
+]

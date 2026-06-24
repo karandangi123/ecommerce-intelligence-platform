@@ -1,0 +1,52 @@
+[
+  {
+    "state": "SP",
+    "revenue": 5880342.86,
+    "revenue_share_pct": 37.36
+  },
+  {
+    "state": "RJ",
+    "revenue": 2116380.56,
+    "revenue_share_pct": 13.45
+  },
+  {
+    "state": "MG",
+    "revenue": 1843812.23,
+    "revenue_share_pct": 11.71
+  },
+  {
+    "state": "RS",
+    "revenue": 877659.27,
+    "revenue_share_pct": 5.58
+  },
+  {
+    "state": "PR",
+    "revenue": 793735.04,
+    "revenue_share_pct": 5.04
+  },
+  {
+    "state": "SC",
+    "revenue": 607626.13,
+    "revenue_share_pct": 3.86
+  },
+  {
+    "state": "BA",
+    "revenue": 607123.51,
+    "revenue_share_pct": 3.86
+  },
+  {
+    "state": "DF",
+    "revenue": 351439.68,
+    "revenue_share_pct": 2.23
+  },
+  {
+    "state": "GO",
+    "revenue": 340291.86,
+    "revenue_share_pct": 2.16
+  },
+  {
+    "state": "ES",
+    "revenue": 323249.95,
+    "revenue_share_pct": 2.05
+  }
+]
