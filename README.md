@@ -1,5 +1,5 @@
 # Olist Marketplace Intelligence Platform
-### *End-to-End Analytics & Decision-Support System for E-Commerce Operations*
+### *End-to-End Analytics & Business Recommendation Engine (Sept 2016 - Oct 2018)*
 
 🌟 **Live Streamlit Dashboard:** [https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app](https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app)
 
@@ -9,22 +9,30 @@
 
 ---
 
-## 🚀 Business Value & Key Insights Discovered
-This project is built around **the only rule that matters**: *If removing a chart doesn't change any decision, the chart should not exist.* Instead of generic charts, this platform uncovers actionable operational and customer bottlenecks:
+## 🚀 The Business Problem
+Olist, a major Brazilian e-commerce marketplace, was struggling to identify the root causes of their operational bottlenecks and customer churn. Executive leaders were attempting to make decisions using **9 fragmented, unindexed CSV files** containing over **100,000 orders** and **1.5 million distinct data points** spanning 25 months.
 
-### 1. The Logistics Failure ➔ Customer Satisfaction Link (Operations View)
-* **Logistics Bottleneck**: In **March 2018**, the late delivery rate peaked at **21.15%** (over 1 in 5 orders were late), with average delivery times climbing to **16.2 days**.
-* **Customer Backlash**: Concurrently, the **Average Review Score fell to 3.75/5** (compared to the usual average of 4.25). This proves delivery speed is the primary driver of customer satisfaction.
+The lack of a unified data model led to blind spots: marketing was acquiring users who never returned, operations couldn't accurately blame carriers vs. sellers for late deliveries, and the CEO's revenue numbers were artificially inflated by canceled orders and multi-item cart bugs.
 
-### 2. Low Retention / The "Leaky Bucket" (Marketing View)
-* **Brutal Churn**: Cohort analysis revealed Olist's **Month 1 retention rate is under 0.5%** (only 3 out of 752 customers returned in January 2017).
-* **The Opportunity**: However, **repeat buyers spend 2x more per transaction** than first-time buyers (`Champions` AOV = **357 BRL** vs `New/Recent` AOV = **161 BRL**).
-* **Decision Enabled**: The VP of Marketing must shift budget from expensive acquisition to customer loyalty programs.
+## 🎯 The Solution & Business Recommendations
+To solve this, I built a highly-optimized **PostgreSQL Star Schema** to serve as the single source of truth, and engineered a zero-latency executive dashboard to track metrics that actually drive business decisions. 
 
-### 3. Route Delays: Carrier vs. Seller Delays (Operations View)
-* **SP ➔ AL Route**: **25.28% late rate**. Delayed orders are caused by the **Carrier (88.06% of faults)**, not the sellers.
-* **MA ➔ SP Route**: **24.80% late rate**. Delayed orders are caused by **Slow Sellers (87.10% of faults)** taking too long to ship.
-* **Decision Enabled**: Replace the carrier on the SP-AL route; penalize/educate slow-shipping sellers in Maranhão (MA).
+Here are the actionable insights generated from the 25-month dataset:
+
+### 1. The "Leaky Bucket" Retention Crisis (Marketing Strategy)
+* **The Data Insight:** A custom SQL Cohort Analysis revealed a brutal churn rate. The Month 1 retention rate across the platform is **under 0.5%** (e.g., only 4 out of 1000 customers acquired in January 2017 returned to buy again the next month).
+* **The Opportunity:** However, our RFM Segmentation model revealed that when a user *does* become a repeat buyer (a "Champion"), their Average Order Value (AOV) is **2x higher** than new users (357 BRL vs. 161 BRL).
+* **The Decision:** The VP of Marketing must instantly pause aggressive top-of-funnel paid acquisition and redirect budget toward customer loyalty and re-engagement campaigns.
+
+### 2. Late Deliveries Destroying Brand Value (Operations Strategy)
+* **The Data Insight:** In March 2018, the late delivery rate spiked to a critical **21.15%**, pushing average delivery times past 16 days. Concurrently, the platform's average review score crashed from 4.25 down to **3.75**.
+* **The Root Cause:** A custom SLA timeline query proved that on the worst-performing route (`SP ➔ AL`, 25.28% late rate), the **Carrier was at fault 88% of the time**. Conversely, on the `MA ➔ SP` route, **Slow Sellers were at fault 87% of the time**.
+* **The Decision:** Operations must renegotiate or replace the logistics carrier for the `SP ➔ AL` route, and implement a penalty system for slow-shipping sellers operating out of Maranhão (`MA`).
+
+### 3. Fixing the Multi-Item Revenue Illusion (Executive Strategy)
+* **The Data Insight:** Previously, if a customer bought 3 items for 100 BRL total, a simple SQL `JOIN` duplicated the payment data, inflating the revenue on the CEO's dashboard to 300 BRL.
+* **The Fix:** I engineered a Common Table Expression (CTE) to pre-aggregate the `raw_order_items` table *before* joining it to the core `fact_orders` table, ensuring mathematically flawless financials.
+* **The Decision:** The CEO now has an accurate Rolling 12-Month (LTM) revenue run-rate (12.11M BRL as of Aug 2018) that is scrubbed of all canceled and unavailable orders, allowing for safe forecasting.
 
 ---
 
