@@ -1,5 +1,5 @@
-# Olist Marketplace Intelligence Platform
-### *End-to-End Analytics & Business Recommendation Engine (Sept 2016 - Oct 2018)*
+# Olist E-Commerce Analytics: End-to-End Portfolio Project
+### *A Data Engineering & Business Intelligence Showcase*
 
 🌟 **Live Streamlit Dashboard:** [https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app](https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app)
 
@@ -9,30 +9,25 @@
 
 ---
 
-## 🚀 The Business Problem
-Olist, a major Brazilian e-commerce marketplace, was struggling to identify the root causes of their operational bottlenecks and customer churn. Executive leaders were attempting to make decisions using **9 fragmented, unindexed CSV files** containing over **100,000 orders** and **1.5 million distinct data points** spanning 25 months.
+## 🎯 Project Overview & Objective
+This is an independent data analysis portfolio project. I utilized the publicly available **Olist Brazilian E-commerce dataset** (containing over 100,000 orders and 1.5 million data points across 9 CSV files spanning 25 months) to demonstrate my ability to build a complete, end-to-end data pipeline. 
 
-The lack of a unified data model led to blind spots: marketing was acquiring users who never returned, operations couldn't accurately blame carriers vs. sellers for late deliveries, and the CEO's revenue numbers were artificially inflated by canceled orders and multi-item cart bugs.
+My goal was to take messy, raw data and transform it into a production-ready Star Schema in PostgreSQL, and then build a zero-latency executive dashboard to extract real-world business insights.
 
-## 🎯 The Solution & Business Recommendations
-To solve this, I built a highly-optimized **PostgreSQL Star Schema** to serve as the single source of truth, and engineered a zero-latency executive dashboard to track metrics that actually drive business decisions. 
+## 🚀 Key Insights Discovered
+By writing advanced SQL queries (CTEs, Window Functions, and Cohort tracking) against the cleaned database, my analysis uncovered the following insights about the Olist marketplace:
 
-Here are the actionable insights generated from the 25-month dataset:
+### 1. The "Leaky Bucket" Retention Crisis
+* **The Data Insight:** A custom SQL Cohort Analysis revealed that the platform's Month 1 retention rate is exceptionally low—**under 0.5%** (e.g., only 4 out of 1000 customers acquired in January 2017 returned to buy again the next month).
+* **The Opportunity:** However, my RFM Segmentation model showed that when a user *does* become a repeat buyer, their Average Order Value (AOV) is **2x higher** than new users (357 BRL vs. 161 BRL). This indicates a massive missed opportunity for loyalty re-engagement.
 
-### 1. The "Leaky Bucket" Retention Crisis (Marketing Strategy)
-* **The Data Insight:** A custom SQL Cohort Analysis revealed a brutal churn rate. The Month 1 retention rate across the platform is **under 0.5%** (e.g., only 4 out of 1000 customers acquired in January 2017 returned to buy again the next month).
-* **The Opportunity:** However, our RFM Segmentation model revealed that when a user *does* become a repeat buyer (a "Champion"), their Average Order Value (AOV) is **2x higher** than new users (357 BRL vs. 161 BRL).
-* **The Decision:** The VP of Marketing must instantly pause aggressive top-of-funnel paid acquisition and redirect budget toward customer loyalty and re-engagement campaigns.
-
-### 2. Late Deliveries Destroying Brand Value (Operations Strategy)
+### 2. Late Deliveries Destroying Brand Value
 * **The Data Insight:** In March 2018, the late delivery rate spiked to a critical **21.15%**, pushing average delivery times past 16 days. Concurrently, the platform's average review score crashed from 4.25 down to **3.75**.
-* **The Root Cause:** A custom SLA timeline query proved that on the worst-performing route (`SP ➔ AL`, 25.28% late rate), the **Carrier was at fault 88% of the time**. Conversely, on the `MA ➔ SP` route, **Slow Sellers were at fault 87% of the time**.
-* **The Decision:** Operations must renegotiate or replace the logistics carrier for the `SP ➔ AL` route, and implement a penalty system for slow-shipping sellers operating out of Maranhão (`MA`).
+* **The Root Cause Analysis:** I built a custom SLA timeline query to isolate the blame. On the worst-performing route (`SP ➔ AL`, 25.28% late rate), the **Carrier was at fault 88% of the time**. Conversely, on the `MA ➔ SP` route, **Slow Sellers were at fault 87% of the time**, proving that blanket operational fixes wouldn't work.
 
-### 3. Fixing the Multi-Item Revenue Illusion (Executive Strategy)
-* **The Data Insight:** Previously, if a customer bought 3 items for 100 BRL total, a simple SQL `JOIN` duplicated the payment data, inflating the revenue on the CEO's dashboard to 300 BRL.
-* **The Fix:** I engineered a Common Table Expression (CTE) to pre-aggregate the `raw_order_items` table *before* joining it to the core `fact_orders` table, ensuring mathematically flawless financials.
-* **The Decision:** The CEO now has an accurate Rolling 12-Month (LTM) revenue run-rate (12.11M BRL as of Aug 2018) that is scrubbed of all canceled and unavailable orders, allowing for safe forecasting.
+### 3. Data Integrity & Revenue Accuracy
+* **The Data Insight:** During the data modeling phase, I realized that if a customer bought 3 items in one cart, a standard SQL `JOIN` between orders and payments would duplicate the rows, falsely inflating total revenue.
+* **The Fix:** I engineered a Common Table Expression (CTE) to pre-aggregate the `raw_order_items` table *before* joining it to the core `fact_orders` table. I also explicitly filtered out 'canceled' and 'unavailable' orders, generating a mathematically flawless Rolling 12-Month (LTM) revenue run-rate (12.11M BRL).
 
 ---
 
