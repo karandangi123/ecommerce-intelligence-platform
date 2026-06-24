@@ -7,6 +7,67 @@ import os
 
 # Set page config
 st.set_page_config(page_title="Olist Marketplace Intelligence", layout="wide", initial_sidebar_state="collapsed")
+
+# Custom Premium CSS Injection
+st.markdown("""
+<style>
+/* App background */
+.stApp {
+    background-color: #07090e;
+}
+/* General Text */
+h1, h2, h3, h4, h5, h6, p, span {
+    font-family: 'Outfit', sans-serif !important;
+}
+/* Metrics styling */
+[data-testid="stMetricValue"] {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #f3f4f6;
+}
+[data-testid="stMetricLabel"] {
+    color: #9ca3af !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+}
+[data-testid="stMetricDelta"] {
+    font-weight: 600;
+}
+/* Glassmorphism Cards */
+[data-testid="metric-container"] {
+    background: rgba(18, 24, 38, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-testid="metric-container"]:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.25);
+    box-shadow: 0 15px 35px -10px rgba(99, 102, 241, 0.2);
+}
+/* Tab Styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1rem;
+}
+.stTabs [data-baseweb="tab"] {
+    background: rgba(18, 24, 38, 0.85);
+    border-radius: 8px 8px 0px 0px;
+    padding: 0.5rem 1rem;
+    color: #9ca3af;
+    font-weight: 600;
+}
+.stTabs [aria-selected="true"] {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: #f3f4f6;
+    border-bottom-color: #6366f1 !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("Olist Marketplace Intelligence Platform")
 
 # Path to the exported JSON data
@@ -48,6 +109,17 @@ def format_num(val):
     elif val >= 1000:
         return f"{val/1000:.1f}k"
     return f"{val:,.0f}"
+
+# Premium Chart Theme Configuration
+chart_layout = dict(
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)',
+    font=dict(color='#f3f4f6', family='Outfit, sans-serif'),
+    margin=dict(l=0, r=0, t=30, b=0),
+    xaxis=dict(showgrid=False, zeroline=False, linecolor='rgba(255,255,255,0.1)', tickfont=dict(color='#9ca3af')),
+    yaxis=dict(showgrid=True, gridcolor='rgba(255, 255, 255, 0.05)', zeroline=False, tickfont=dict(color='#9ca3af')),
+    legend=dict(font=dict(color='#9ca3af'))
+)
 
 # Create Tabs
 tab_ceo, tab_ops, tab_mkt, tab_geo = st.tabs([
@@ -103,11 +175,11 @@ with tab_ceo:
         fig.add_trace(go.Scatter(x=filtered_ceo['Month'], y=filtered_ceo['total_revenue'], name="Revenue", fill='tozeroy', marker_color='#6366f1'))
         fig.add_trace(go.Scatter(x=filtered_ceo['Month'], y=filtered_ceo['total_orders'], name="Orders", yaxis="y2", marker_color='#10b981'))
         
+        fig.update_layout(**chart_layout)
         fig.update_layout(
-            yaxis=dict(title="Revenue (BRL)", side="left"),
-            yaxis2=dict(title="Orders", side="right", overlaying="y"),
+            yaxis=dict(title="Revenue (BRL)", side="left", showgrid=True, gridcolor='rgba(255, 255, 255, 0.05)', zeroline=False, tickfont=dict(color='#9ca3af')),
+            yaxis2=dict(title="Orders", side="right", overlaying="y", showgrid=False, zeroline=False, tickfont=dict(color='#9ca3af')),
             hovermode="x unified",
-            margin=dict(l=0, r=0, t=30, b=0),
             height=400
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -135,7 +207,8 @@ with tab_ops:
         fig_ops = go.Figure()
         fig_ops.add_trace(go.Scatter(x=filtered_ops['Month'], y=filtered_ops['avg_delivery_days'], name="Avg Delivery Days", marker_color='#f59e0b', mode='lines+markers'))
         fig_ops.add_trace(go.Scatter(x=filtered_ops['Month'], y=[10]*len(filtered_ops), name="SLA Limit", line=dict(color='red', dash='dash')))
-        fig_ops.update_layout(hovermode="x unified", height=300, margin=dict(l=0, r=0, t=30, b=0))
+        fig_ops.update_layout(**chart_layout)
+        fig_ops.update_layout(hovermode="x unified", height=300)
         st.plotly_chart(fig_ops, use_container_width=True)
         
         if not root_cause.empty:
@@ -147,7 +220,8 @@ with tab_ops:
                             title="Seller vs Carrier Fault Share", 
                             labels={"value": "Percentage (%)", "variable": "Fault Source"},
                             color_discrete_map={"seller_fault_share_pct": "#6366f1", "carrier_fault_share_pct": "#10b981"})
-            fig_rc.update_layout(barmode="stack", height=350, margin=dict(l=0, r=0, t=30, b=0))
+            fig_rc.update_layout(**chart_layout)
+            fig_rc.update_layout(barmode="stack", height=350)
             st.plotly_chart(fig_rc, use_container_width=True)
 
 # --- 3. MARKETING & CUSTOMERS TAB ---
@@ -173,8 +247,9 @@ with tab_mkt:
             if not rfm_data.empty:
                 st.markdown("### RFM Segment Distribution")
                 fig_rfm = px.bar(rfm_data, x="rfm_segment", y="customer_count", text="customer_count", color_discrete_sequence=['#6366f1'])
-                fig_rfm.update_traces(texttemplate='%{text:.2s}', textposition='outside')
-                fig_rfm.update_layout(height=350, margin=dict(l=0, r=0, t=30, b=0))
+                fig_rfm.update_traces(texttemplate='%{text:.2s}', textposition='outside', textfont=dict(color='#f3f4f6'))
+                fig_rfm.update_layout(**chart_layout)
+                fig_rfm.update_layout(height=350)
                 st.plotly_chart(fig_rfm, use_container_width=True)
                 
         with col_m2:
@@ -188,7 +263,8 @@ with tab_mkt:
                 
                 fig_cohort = go.Figure()
                 fig_cohort.add_trace(go.Scatter(x="Month " + jan_full['cohort_index'].astype(str), y=jan_full['retention_pct'], fill='tozeroy', marker_color='#10b981'))
-                fig_cohort.update_layout(yaxis=dict(range=[0, 1.2]), height=350, margin=dict(l=0, r=0, t=30, b=0))
+                fig_cohort.update_layout(**chart_layout)
+                fig_cohort.update_layout(yaxis=dict(range=[0, 1.2], showgrid=True, gridcolor='rgba(255,255,255,0.05)', zeroline=False), height=350)
                 st.plotly_chart(fig_cohort, use_container_width=True)
 
 # --- 4. GEO & CATEGORIES TAB ---
@@ -199,8 +275,9 @@ with tab_geo:
         if not geo_data.empty:
             st.markdown("### Top 10 States by Revenue")
             fig_geo = px.bar(geo_data, x="state", y="revenue", text="revenue", color_discrete_sequence=['#6366f1'])
-            fig_geo.update_traces(texttemplate='%{text:.2s}', textposition='outside')
-            fig_geo.update_layout(height=400, margin=dict(l=0, r=0, t=30, b=0))
+            fig_geo.update_traces(texttemplate='%{text:.2s}', textposition='outside', textfont=dict(color='#f3f4f6'))
+            fig_geo.update_layout(**chart_layout)
+            fig_geo.update_layout(height=400)
             st.plotly_chart(fig_geo, use_container_width=True)
             
     with col_g2:
@@ -210,10 +287,11 @@ with tab_geo:
             fig_cat = go.Figure()
             fig_cat.add_trace(go.Bar(x=cat_data['Category'], y=cat_data['revenue'], name="Revenue", marker_color='#6366f1'))
             fig_cat.add_trace(go.Scatter(x=cat_data['Category'], y=cat_data['avg_review_score'], name="Rating", yaxis="y2", marker_color='#ffc107', mode='lines+markers'))
+            fig_cat.update_layout(**chart_layout)
             fig_cat.update_layout(
-                yaxis=dict(title="Revenue (BRL)"),
-                yaxis2=dict(title="Rating", overlaying="y", side="right", range=[3.0, 5.0]),
-                height=400, margin=dict(l=0, r=0, t=30, b=0),
+                yaxis=dict(title="Revenue (BRL)", showgrid=True, gridcolor='rgba(255,255,255,0.05)', zeroline=False),
+                yaxis2=dict(title="Rating", overlaying="y", side="right", range=[3.0, 5.0], showgrid=False, zeroline=False),
+                height=400,
                 legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
             )
             st.plotly_chart(fig_cat, use_container_width=True)
@@ -226,6 +304,7 @@ with tab_geo:
         # Plotly Area Chart
         fig_pay = px.area(pay_filtered, x="Month", y="payment_value", color="payment_type", 
                           color_discrete_sequence=['#6366f1', '#10b981', '#f59e0b', '#ef4444'])
-        fig_pay.update_layout(height=400, margin=dict(l=0, r=0, t=30, b=0))
+        fig_pay.update_layout(**chart_layout)
+        fig_pay.update_layout(height=400)
         st.plotly_chart(fig_pay, use_container_width=True)
 
