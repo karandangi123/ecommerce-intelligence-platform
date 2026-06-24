@@ -1,6 +1,8 @@
 # Olist Marketplace Intelligence Platform
 ### *End-to-End Analytics & Decision-Support System for E-Commerce Operations*
 
+🌟 **Live Streamlit Dashboard:** [https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app](https://ecommerce-intelligence-platform-luombiaprr2bxivvpxewoc.streamlit.app)
+
 ---
 
 ## 🚀 Business Value & Key Insights Discovered
